@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Nakatech - My Development place</title>
+    <meta charset="utf-8"></meta>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <!-- css -->
+    <link href="../../css/bootstrap.min.css"  rel="stylesheet"  th:href="@{/css/bootstrap.min.css}" media="screen"/> 
+    <link href="../../css/style.css" rel="stylesheet" media="screen"/> 
+	<link href="../../color/default.css" rel="stylesheet" media="screen"/> 
+	<script src="../../js/modernizr.custom.js"></script>
+  </head>
+  <body>
+	<div class="menu-area">
+			<div id="dl-menu" class="dl-menuwrapper">
+						<button class="dl-trigger">Open Menu</button>
+						<ul class="dl-menu">
+							<li>
+								<a href="/lab">Home</a>
+							</li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div><!-- /dl-menuwrapper -->
+	</div>	
+
+	  <!-- intro area -->	  
+	  
+	  <div>
+	     
+	     <img alt="" height="500px" width="900px" src="../../img/works/rest-api.jpg"/>
+	  
+	  </div>
+	
+	  
+      
+       <!-- Article -->
+       <article>
+	        <div class="container" 
+	             style="margin-top: 30px;">
+	
+	            <div class="row">
+	            
+	            
+	            	<div class="row" style="background:#f2f2f2;	border: 30px solid rgba(242, 242, 242);">            	                        
+				                    
+                         <h2 align="center"> Testando uma API Rest </h2>
+                     
+                         <p align="left">
+			               Ultimamente no serviço, venho percebido muita gente com dúvidas ou fazendo confusão
+			               sobre os métodos REST. Dúvidas como quando usar os métodos POST, GET e PUT. <br/>
+			               Mas antes de usar os métodos é importante entender o que é a tecnologia REST.	               
+                         </p>
+                      
+                         <br/>
+                         
+                         <h5 align="center"> REST - Representational State Transfer  </h5>
+                         
+                         <p align="left">
+			               Representational State Transfer ou Transferência de Estado Representacional, é um conceito ou modelo 
+			               arquitetural	com conjunto de métodos e regras. Existe muita confusão sobre o uso do REST em relação 
+			               ao uso do RPC ou Remote Procedure Call. <br/>
+			               Apesar dos 2 utilizarem o protocolo HTTP, no RPC, dá-se ênfase à diversidade de operações(getUser, addUser),
+			         	   já no REST, a ênfase está na diversidade de recursos(User, Address)  .        
+                         </p>
+                         
+                         <br/>
+                         
+                         <h5 align="center"> Principais métodos Rest usados</h5>
+                         
+                         <p align="left">
+			               <b> GET: </b> Solicita um representação do recurso especificado.	               
+                         </p>
+                         
+                         <p align="left">
+			               <b> POST: </b> Envia uma entidade e solicita ao servidor uma ação de gravar por exemplo.	               
+                         </p>
+                    
+                    </div>
+                    
+                    
+		  
+		        </div>
+		        
+		    </div>
+	   </article>
+	
+	   
+	
+
+	  
+	 <!-- Contact -->
+	  <section id="contact" class="home-section bg-white">
+	  	<div class="container">
+			 
+	  		
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+						
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+						
+					</ul>
+				</div>				
+			</div>
+
+	  	</div>
+	  </section>  
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy;2014 Mamba company. All rights reserved. By <a href="http://bootstraptaste.com">Bootstraptaste</a></p>
+				</div>
+			</div>		
+		</div>	
+	</footer>
+	 
+	 <!-- js -->
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+  	</body>
+</html>
