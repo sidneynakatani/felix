@@ -12,6 +12,8 @@
 	<script src="../../js/modernizr.custom.js"></script>
   </head>
   <body>
+    <!--  Thumb -->
+    <img src="img/works/rest-api.jpg" alt="" style="display:none;"/> 
 	<div class="menu-area">
 			<div id="dl-menu" class="dl-menuwrapper">
 						<button class="dl-trigger">Open Menu</button>
@@ -23,7 +25,7 @@
 							<li><a href="#contact">Contact</a></li>
 						</ul>
 					</div><!-- /dl-menuwrapper -->
-	</div>	
+	 </div>	
 
 	  <!-- intro area -->	  
 	  
@@ -70,12 +72,61 @@
                          <h5 align="center"> Principais métodos Rest usados</h5>
                          
                          <p align="left">
-			               <b> GET: </b> Solicita um representação do recurso especificado.	               
+			               <b> Options: </b> Exibe todos os métodos que o recurso suporta.<br/>  
+			               
+			               Abaixo um exemplo em curl de uma requisição OPTIONS, se estiver utilizando Linux execute em um terminal, se
+			               estiver utilizando Windows, baixe o GitBash e execute o comando abaixo para verificar todos recursos.<br/>
+			               Perceba que o exemplo abaixo obteve sucesso e retornou todos os métodos suportados.
+			               <img alt="" src="../../img/works/20170709/options.jpeg"/>             
                          </p>
                          
-                         <p align="left">
-			               <b> POST: </b> Envia uma entidade e solicita ao servidor uma ação de gravar por exemplo.	               
+                         <hr/><br/>
+                         
+                          <p align="left">
+			               <b> POST: </b> Envia uma entidade e solicita ao servidor uma ação. Gravar uma entidade por exemplo.<br/>  
+			               
+			               Execute o comando abaixo para o recurso gravar uma entidade.<br/>
+			               Perceba que o exemplo abaixo obteve sucesso e retornou o status <b>201</b> que significa CREATED 
+			               ou recurso criado. 
+			               <img alt="" src="../../img/works/20170709/post.jpeg"/>             
                          </p>
+                         
+                         <hr/><br/>
+                         
+                         <p align="left">
+			               <b> GET: </b> Solicita um representação do recurso especificado.	 <br/>
+			               
+			               Abaixo solicitamos agora a entidade com id 1. O Recurso retorna a entidade no formato Json.
+			               
+			               <img alt="" src="../../img/works/20170709/get.jpeg"/>                  
+                         </p>
+                         
+                         <hr/><br/>
+                         
+                         <p align="left">
+			               <b> PUT: </b> Solicita um alteração do recurso especificado. Atualiza uma entidade <br/>
+			               
+			               Abaixo solicitamos atualização da entidade com id 1. O Recurso retorna o status <b>200</b> o que
+			               significa Sucesso. <br/>
+			               Logo em seguida solicitamos uma requisição GET para verificar que a atualização foi feita com sucesso.
+			               
+			               <img alt="" src="../../img/works/20170709/put.jpeg"/>                  
+                         </p>
+                         
+                         
+                         <hr/><br/>
+                         
+                         <p align="left">
+			               <b> DELETE: </b> Solicita remoção do recurso especificado. Remove uma entidade <br/>
+			               
+			               Abaixo solicitamos remoção da entidade com id 1. O Recurso retorna o status <b>200</b> o que
+			               significa Sucesso. <br/>
+			               Logo em seguida solicitamos uma requisição GET para verificar que a remoção foi feita com sucesso.
+			               
+			               <img alt="" src="../../img/works/20170709/delete.jpeg"/>                  
+                         </p>
+                         
+                        
                     
                     </div>
                     
