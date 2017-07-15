@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  	   
+	<!--  Thumb -->
+    <img src="../../img/works/20170709/api.png" alt="" style="display:none;"/> 
+     
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+	  
+
+  <head>
+    
+    <title>Nakatech - My Development place</title>
+    <meta charset="utf-8"></meta>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <!-- css -->
+    <link href="../../css/bootstrap.min.css"  rel="stylesheet"  th:href="@{/css/bootstrap.min.css}" media="screen"/> 
+    <link href="../../css/style.css" rel="stylesheet" media="screen"/> 
+	<link href="../../color/default.css" rel="stylesheet" media="screen"/> 
+	<script src="../../js/modernizr.custom.js"></script>
+  </head>
+  <body>  
+
+        
+	<div class="menu-area">
+			<div id="dl-menu" class="dl-menuwrapper">
+						<button class="dl-trigger">Open Menu</button>
+						<ul class="dl-menu">
+							<li>
+								<a href="/lab">Home</a>
+							</li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div><!-- /dl-menuwrapper -->
+	 </div>	
+
+	  <!-- intro area -->	  
+	  
+	  <div align="center">
+	     
+	     <img class="img-responsive"  alt="" height="500px" width="900px" src="../../img/works/rest-api.jpg"/>
+	  
+	  </div>
+	
+	  
+      
+       <!-- Article -->
+       <article>
+	        <div class="container" 
+	             style="margin-top: 30px;">
+	
+	      
+	            
+	            
+	            	<div class="row" style="background:#f2f2f2;	border: 30px solid rgba(242, 242, 242);">            	                        
+				                    
+                         <h2 align="center"> Kotlin, já conhece? </h2>
+                     
+                         <p align="left">
+			      Já conhece Kotlin? Se não conhece, vale a pena parar alguns minutos e ler um pouco sobre essa nova 
+                              linguagem de programação. <br/>
+                              Uma linguagem funcional, Null-safety e interoperável com Java.<br/>   
+                              O Kotlin foi adicionado recentemente a lista de linguagem de progração para desenvolvimento Android, antes
+                              fazia parte dessa lista Java e C++.           
+                         </p>
+
+			 <p align="left">
+			      Vou dividir esse artigo em 5 post's para não ficar muito longo o artigo e dar tempo de escrever sobre. Os 
+                              5 artigos são: <br/>
+                              1- Kotlin básico.<br/>
+                              2- <br/>
+                              3- <br/>
+                              4- <br/>
+                              5- <br/>
+                                  
+                         </p>
+                      
+                         <br/>
+                         
+                         <h5 align="center"> Kotlin básico  </h5>
+                         
+                         <p align="left">
+			     Kotlin é uma linguagem de programação funcional que roda a partir de uma JVM, tornando uma linguagem totalmente 
+                             interagível com Java. Nesse mesmo contexto, podemos misturar códigos Java e Kotlin no mesmo projeto. 
+                         </p>
+                         
+                         <br/>
+                         
+                         <h5 align="center"> Principais métodos Rest usados</h5>
+                         
+                         <p align="left">
+			               <b> Options: </b> Exibe todos os métodos que o recurso suporta.<br/>  
+			               
+			               Abaixo um exemplo em curl de uma requisição OPTIONS, se estiver utilizando Linux execute em um terminal, se
+			               estiver utilizando Windows, baixe o GitBash e execute o comando abaixo para verificar todos recursos.<br/>
+			               Perceba que o exemplo abaixo obteve sucesso e retornou todos os métodos suportados.
+			               <img alt="" class="img-responsive"  src="../../img/works/20170709/options.jpeg"/>             
+                         </p>
+                         
+                         <hr/><br/>
+                         
+                          <p align="left">
+			               <b> POST: </b> Envia uma entidade e solicita ao servidor uma ação. Gravar uma entidade por exemplo.<br/>  
+			               
+			               Execute o comando abaixo para o recurso gravar uma entidade.<br/>
+			               Perceba que o exemplo abaixo obteve sucesso e retornou o status <b>201</b> que significa CREATED 
+			               ou recurso criado. 
+			               <img alt="" class="img-responsive"  src="../../img/works/20170709/post.jpeg"/>             
+                         </p>
+                         
+                         <hr/><br/>
+                         
+                         <p align="left">
+			               <b> GET: </b> Solicita um representação do recurso especificado.	 <br/>
+			               
+			               Abaixo solicitamos agora a entidade com id 1. O Recurso retorna a entidade no formato Json.
+			               
+			               <img alt="" class="img-responsive"  src="../../img/works/20170709/get.jpeg"/>                  
+                         </p>
+                         
+                         <hr/><br/>
+                         
+                         <p align="left">
+			               <b> PUT: </b> Solicita um alteração do recurso especificado. Atualiza uma entidade <br/>
+			               
+			               Abaixo solicitamos atualização da entidade com id 1. O Recurso retorna o status <b>200</b> o que
+			               significa Sucesso. <br/>
+			               Logo em seguida solicitamos uma requisição GET para verificar que a atualização foi feita com sucesso.
+			               
+			               <img alt="" class="img-responsive"  src="../../img/works/20170709/put.jpeg"/>                  
+                         </p>
+                         
+                         
+                         <hr/><br/>
+                         
+                         <p align="left">
+			               <b> DELETE: </b> Solicita remoção do recurso especificado. Remove uma entidade <br/>
+			               
+			               Abaixo solicitamos remoção da entidade com id 1. O Recurso retorna o status <b>200</b> o que
+			               significa Sucesso. <br/>
+			               Logo em seguida solicitamos uma requisição GET para verificar que a remoção foi feita com sucesso.
+			               
+			               <img alt="" class="img-responsive"  src="../../img/works/20170709/delete.jpeg"/>                  
+                         </p>
+                         
+                        
+                    
+                    </div>
+                    
+                    
+		  
+		    
+		        
+		    </div>
+	   </article>
+	
+
+	 <!-- Contact -->
+	  <section id="contact" class="home-section bg-white">
+	  	<div class="container">
+			 
+	  		
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+						
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+						
+					</ul>
+				</div>				
+			</div>
+
+	  	</div>
+	  </section>  
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy;2014 Mamba company. All rights reserved. By <a href="http://bootstraptaste.com">Bootstraptaste</a></p>
+				</div>
+			</div>		
+		</div>	
+	</footer>
+	 
+	 <!-- js -->
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+  	</body>
+</html>
