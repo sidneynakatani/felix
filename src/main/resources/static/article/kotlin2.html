@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  	   
+	<!--  Thumb -->
+    <img src="../../img/works/20170715/kotlin.png" alt="" style="display:none;"/> 
+     
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+	  
+
+  <head>
+    
+    <title>Nakatech - My Development place</title>
+    <meta charset="utf-8"></meta>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <!-- css -->
+    <link href="../../css/bootstrap.min.css"  rel="stylesheet"  th:href="@{/css/bootstrap.min.css}" media="screen"/> 
+    <link href="../../css/style.css" rel="stylesheet" media="screen"/> 
+	<link href="../../color/default.css" rel="stylesheet" media="screen"/> 
+	<script src="../../js/modernizr.custom.js"></script>
+  </head>
+  <body>  
+
+        
+	<div class="menu-area">
+			<div id="dl-menu" class="dl-menuwrapper">
+						<button class="dl-trigger">Open Menu</button>
+						<ul class="dl-menu">
+							<li>
+								<a href="/lab">Home</a>
+							</li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div><!-- /dl-menuwrapper -->
+	 </div>	
+
+	  <!-- intro area -->	  
+	  
+	  <div align="center">
+	     
+	     <img class="img-responsive"  alt="" height="500px" width="900px" src="../../img/works/20170723/kotlin2.png"/>
+	  
+	  </div>
+	
+	  
+      
+       <!-- Article -->
+       <article>
+	        <div class="container" 
+	             style="margin-top: 30px;">
+	
+	      
+	            
+	            
+	            	<div class="row" style="background:#f2f2f2;	border: 30px solid rgba(242, 242, 242);">            	                        
+				                    
+                         <h2 align="center"> Kotlin, sintaxe básica. </h2>
+                     
+                         <p align="left" class="lead">
+			      			  Continuando o artigo, vamos abordar um pouco da sintaxe do Kotlin. <br/>
+                              Muito parecido com Java e C#, a linguagem se torna muito fácil para que já desenvolve nessas
+                              linguagens.<br/> Com algumas diferenças, como forma de declarar o método, sintaxe expressiva, 
+                              checagem de tipo, cast automático, entre outros.<br/>
+                         </p>
+
+						<p align="left" class="lead">
+							Vou dividir esse artigo em 5 post's para não ficar muito longo o artigo e dar tempo de escrever sobre.<br/><br/>
+							
+								<a href="/article/kotlin1.html">1- Kotlin básico. </a><br/>
+								<a href="#">2- Kotlin sintaxe básica. </a><br/>
+								3- Kotlin Classes, Interface e Herança.<br/>
+								4- Kotlin Modificadores.<br/>
+								5- Kotlin Server-Side<br/>
+                                  
+                         </p>
+                      
+                         <br/>
+                         
+                         <h3 align="center"> Sintaxe Kotlin   </h3>
+                         
+                         <p align="left" class="lead">
+			    		  	 Kotlin tem uma sintaxe bem fácil de se escrever. Possibilita a escrita de códigos mais expressivas, 
+			    		  	 tornando o projeto mais limpo.<br/>
+			    		  	 Por ser uma linguagem concisa, podemos fazer muita coisa com menos linhas de código.<br/>
+			    		  	 Por ser interoperável com Java, migrações de um sistema Java para Kotlin fica mais fácil de ser 
+			    		  	 feito. Além disso, podemos escrever códigos Javascript com Kotlin. 
+                         </p>
+                         
+                         
+                         <br/>
+                         
+                         <h3 align="center"> Package e Import</h3>
+                         
+                         <br/>
+                         
+                         <p align="left" class="lead">
+			               Assim como Java, a declaração do pacote deve ser feito na primeira linha do código, seguido dos imports. 	                         
+                         </p>
+                         
+                         <div class="panel panel-default">
+						  <div class="panel-body" align="left">
+						    package meu.pacote.teste; <br/><br/>
+
+							import org.springframework.boot.SpringApplication;<br/><br/>
+
+                            // ...<br/>
+						  </div>
+						 </div>
+						 
+						 <p align="left" class="lead">
+			               Por padrão, alguns pacotes básicos são importados automaticamente. 	                         
+                         </p>
+						 
+						 <div class="panel panel-default">
+						  <div class="panel-heading">Pacotes básicos</div>
+						  <div class="panel-body" align="left">
+						    <ul>
+							  <li>kotlin.*</li>
+							  <li>kotlin.annotation.*</li>
+							  <li>kotlin.collections.*</li>
+							  <li>kotlin.comparisons.* (Desde 1.1)</li>
+							  <li>kotlin.io.*</li>
+							  <li>kotlin.ranges.*</li>
+							  <li>kotlin.sequences.*</li>
+							  <li>kotlin.text.*</li>
+							</ul>
+						  </div>
+						</div>
+	                     
+   
+	                     <br/> <br/> 
+                         
+                     
+                         
+                         <h3 align="center"> Definindo a função </h3>
+                        
+                         <br/> 
+                         <p align="left" class="lead">
+			               Existem algumas formas de declarar a função:                        
+                         </p>
+                        
+                         <div>
+                         
+                            <div class="panel panel-default">
+							  <div class="panel-heading">Sem parâmetro e retorno</div>
+							  <div class="panel-body" align="left">
+							  
+							      fun sayHello(){  <br/>
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print("Hello")  <br/>
+							   	  } <br/>
+							       
+							  </div>
+							</div>
+                             
+	                        <div class="panel panel-default">
+							  <div class="panel-heading">Com 1 parâmetro Int e retorno Int</div>
+							  <div class="panel-body" align="left">
+							  
+							      fun showParam(a: Int): Int {  <br/>
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return a  <br/>
+							   	  } <br/>
+							       
+							  </div>
+							</div>
+							
+							<div class="panel panel-default">
+							  <div class="panel-heading">A mesma expressão acima em 1 linha</div>
+							  <div class="panel-body" align="left">
+							     fun showParam(a: Int) = a 	       
+							  </div>
+							</div>
+							
+							<div class="panel panel-default">
+							  <div class="panel-heading">Com 1 parâmetro e sem retorno (<b>Unit</b>, representa o <b>void</b> do Java)</div>
+							  <div class="panel-body" align="left">
+							     fun printParam(a: Int): Unit {  <br/>
+								 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;println("show $a") <br/>
+								 } <br/>
+							  </div>
+							</div>
+							
+							<div class="panel panel-default">
+							  <div class="panel-heading">A mesma expressão acima omitindo <b>Unit</b> </div>
+							  <div class="panel-body" align="left">
+							     fun printParam(a: Int) {  <br/>
+								 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;println("show $a") <br/>
+								 } <br/>
+							  </div>
+							</div>
+							
+		
+						</div>
+						
+						
+						<br/><br/>
+						
+						
+						<h3 align="center"> Definindo variáveis </h3>
+                        
+                        <br/> 
+                        
+                         <h5 align="left"> Variáveis somente leitura: </h5>
+                        
+                        
+                         <div>
+                             
+	                        <div class="panel panel-default">
+							  <div class="panel-heading">Declarando variáveis somente leitura</div>
+							  <div class="panel-body" align="left">
+							  	val size: Int = 1  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// declarando com tipo e valor <br/> 
+								val size = 2       &nbsp;&nbsp;&nbsp;// omitindo tipo  <br/> 
+								val c: Int         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// tipagem é obrigatória quando não é informado o valor <br/> 
+								size = 3           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// omitindo tipo e atribuição <br/> 
+							      
+							  </div>
+							</div>
+							
+                         </div>
+                         
+                         
+                         
+                         <br/> 
+                        
+                         <h5 align="left"> Variáveis escrita e leitura: </h5>
+                        
+                        
+                         <div>
+                             
+	                        <div class="panel panel-default">
+							  <div class="panel-heading">Declarando variáveis escrita e leitura</div>
+							  <div class="panel-body" align="left">
+							  	var size = 5    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//  omitindo tipo <br/> 						
+							  </div>
+							
+                         </div>
+                         
+      
+                         
+                         <br/><br/>
+						
+						
+						 <h3 align="center"> Função com condicionais </h3>
+                        
+                         <br/> 
+                         
+                         
+                         <div class="panel panel-default">
+							  <div class="panel-heading">Função com a condicional if/else</div>
+							  <div class="panel-body" align="left">
+							     fun maiorValor(a: Int, b: Int): Int { <br/>
+								    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (a > b) { <br/>
+								    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return a <br/>
+								    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else { <br/>
+								    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return b <br/>
+								    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
+								 }
+							  </div>
+						 </div>
+                         
+                         
+                         <div class="panel panel-default">
+							  <div class="panel-heading">A mesma função acima em 1 linha, estilo ternário</div>
+							  <div class="panel-body" align="left">
+							     fun maiorValor(a: Int, b: Int) = if (a > b) a else b     
+							  </div>
+						 </div>
+							
+							
+							
+						
+						 <br/><br/>
+						
+						
+						 <h3 align="center"> Checagem de tipos e cast automático </h3>
+                        
+                         <br/> 
+                         
+                         
+                         <div class="panel panel-default">
+							  <div class="panel-heading">Verificando a tipagem </div>
+							  <div class="panel-body" align="left">
+							     fun getTamanho(any: Any): Int? {   <br/>
+								 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (any !is String) return null <br/><br/>
+						         
+								 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return any.length <br/>
+								 }   
+							  </div>
+						 </div>
+						 
+						 
+						 <div class="panel panel-default">
+							  <div class="panel-heading">Cast automático </div>
+							  <div class="panel-body" align="left">
+							     fun showCast(value: Int){   <br/>
+								 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; println("to Double: "+ value.toDouble())<br/>
+								 }<br/>
+							  </div>
+						 </div>
+                         
+                         
+                         
+                         
+						
+						<br/><br/>
+						
+						
+						 <h3 align="center"> Função com laços for / while / when</h3>
+                        
+                         <br/> 
+                         
+                         
+                         <div class="panel panel-default">
+							  <div class="panel-heading">Função com a laço for</div>
+							  <div class="panel-body" align="left">
+							  
+							      fun exemploFor() { <br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val veiculos = listOf("carro", "ônibus", "trem") <br/>
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (veiculo in veiculos) { <br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;println(veiculo) <br/>
+								  }
+								   
+							  </div>
+						 </div>
+						
+						
+                         <div class="panel panel-default">
+							  <div class="panel-heading">Função com a laço while</div>
+							  <div class="panel-body" align="left">
+							  
+							      fun exemploWhile() { <br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var indice = 0 <br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val veiculos = listOf("carro", "ônibus", "trem") <br/>
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (indice &lt; veiculos.size) {<br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;println(veiculo) <br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indice++ <br/>
+								  }
+								   
+							  </div>
+						  </div>
+						 
+						 
+						 
+						  <div class="panel panel-default">
+							  <div class="panel-heading">Função com condicional when</div>
+							  <div class="panel-body" align="left">
+							  
+							      fun cores(codigo: Int): String = <br/>
+							      when (codigo) { <br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1          -> "Azul" <br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2          -> "Verde" <br/>
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3          -> "Preto" <br/>
+
+								  }
+								   
+							  </div>
+						  </div>
+						  
+						  
+						  
+						 
+						 <br/><br/>
+						
+						
+						 <h3 align="center"> Função com Range e Collections</h3>
+                        
+                         <br/> 
+                         
+                         
+                         <div class="panel panel-default">
+							  <div class="panel-heading">Função com range</div>
+							  <div class="panel-body" align="left">
+							  
+							      fun exemploRange() { <br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (x in 1..5) { <br/>
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(x)  <br/>  
+								  } <br/>
+								  //12345
+							  </div>
+						 </div>
+						 
+						 
+						 <div class="panel panel-default">
+							  <div class="panel-heading">Função checando collection com <b> in </b></div>
+							  <div class="panel-body" align="left">
+							      val frutas = listOf("banana", "laranja", "maçã") <br/>
+							      fun toEnglish() { <br/>
+							      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when { <br/>
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"banana" in items -> println("banana") <br/>
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"laranja" in items -> println("orange") <br/>  
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"maçã" in items -> println("apple") <br/>    
+								  } <br/>
+								  
+							  </div>
+						 </div>
+						 
+				  </div>
+				</div>		 
+              </div>             
+             
+	   </article>
+	
+
+	 <!-- Contact -->
+	  <section id="contact" class="home-section bg-white">
+	  	<div class="container">
+			 
+	  		
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+						
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+						
+					</ul>
+				</div>				
+			</div>
+
+	  	</div>
+	  </section>  
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy;2014 Mamba company. All rights reserved. By <a href="http://bootstraptaste.com">Bootstraptaste</a></p>
+				</div>
+			</div>		
+		</div>	
+	</footer>
+	 
+	 <!-- js -->
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+  	</body>
+</html>
