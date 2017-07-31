@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  	   
+	<!--  Thumb -->
+    <img src="../../img/works/20170729/kotlin_3.png" alt="" style="display:none;"/> 
+     
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+	  
+
+  <head>
+    
+    <title>Nakatech - My Development place</title>
+    <meta charset="utf-8"></meta>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <!-- css -->
+    <link href="../../css/bootstrap.min.css"  rel="stylesheet"  th:href="@{/css/bootstrap.min.css}" media="screen"/> 
+    <link href="../../css/style.css" rel="stylesheet" media="screen"/> 
+	<link href="../../color/default.css" rel="stylesheet" media="screen"/> 
+	<script src="../../js/modernizr.custom.js"></script>
+  </head>
+  <body>  
+
+        
+	<div class="menu-area">
+			<div id="dl-menu" class="dl-menuwrapper">
+						<button class="dl-trigger">Open Menu</button>
+						<ul class="dl-menu">
+							<li>
+								<a href="/lab">Home</a>
+							</li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div><!-- /dl-menuwrapper -->
+	 </div>	
+
+	  <!-- intro area -->	  
+	  
+	  <div align="center">
+	     
+	     <img class="img-responsive"  alt="" height="500px" width="900px" src="../../img/works/20170729/kotlin_3.png"/>
+	  
+	  </div>
+	
+	  
+      
+       <!-- Article -->
+       <article>
+	        <div class="container" 
+	             style="margin-top: 30px;">
+	
+	      
+	            
+	            
+	            	<div class="row" style="background:#f2f2f2;	border: 30px solid rgba(242, 242, 242);">            	                        
+				                    
+                         <h2 align="center"> Kotlin, Classes, Interface e Herança. </h2>
+                     
+                         <p align="left" class="lead">
+			      			  Nesse artigo vamos abordar um pouco sobre classes, herança e interface. <br/>
+                              Por se tratar de um conceito, vamos somente apresentar como é representado cada uma
+                              delas no Kotlin e algumas diferenças com outras linguagens Orientada a Objetos.<br/>
+                         </p>
+
+						<p align="left" class="lead">
+							Vou dividir esse artigo em 5 post's para não ficar muito longo o artigo e dar tempo de escrever sobre.<br/><br/>
+							
+								<a href="/article/kotlin1.html">1- Kotlin básico. </a><br/>
+								<a href="/article/kotlin2.html">2- Kotlin sintaxe básica. </a><br/>
+								<a href="#">3- Kotlin Classes, Interface e Herança.</a><br/>
+								4- Kotlin Modificadores.<br/>
+								5- Kotlin Server-Side<br/>
+                                  
+                         </p>
+                      
+                         <br/>
+                         
+                         <h3 align="center"> Classes </h3>
+                         
+                         <p align="left" class="lead">
+			    		  	 Em Kotlin, as classes podem ser escritas de algumas formas, que na minha opinião confunde um pouco
+			    		  	 principalmente quem está começando com programação.<br/>
+			    		  	 Diferente do Java, em Kotlin você pode declarar os parâmetros do construtor na própria declaração
+			    		  	 da classe, fica a seu critério.  
+                         </p>
+
+
+						<div class="panel panel-default">
+							<div class="panel-heading">Parâmetro do construtor na declaração da Classe</div>
+							<div class="panel-body" align="left">
+		
+								<span style="color: blue">class </span>Carro (roda: Int) { <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								...<br /> } <br/><br/>
+								
+								<p style="color: green">//Ou pode-se declarar no construtor </p> <br/>
+								
+								<span style="color: blue">class</span> Carro <span style="color: blue">constructor</span> (roda: Int) { <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								...<br /> } <br />
+		
+							</div>
+						</div>
+
+
+						<div class="panel panel-default">
+							<div class="panel-heading">Declarando Classe sem construtor</div>
+							<div class="panel-body" align="left">
+		
+								<span style="color: blue">class</span> Teste{ <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								...<br /> } <br />
+		
+							</div>
+						</div>
+						
+						
+						 <br/><br/>
+						
+						<p align="left" class="lead">
+			    		  	 Podemos declarar variáveis somente leitura e/ou variáveis alteráveis, utilizando os modificadores
+			    		  	 <b>val</b> e <b>var</b>.  
+                        </p>
+                            
+                        
+                        <div class="panel panel-default">
+							<div class="panel-heading">Declarando variáveis alteráveis e somente leitura</div>
+							<div class="panel-body" align="left">
+		
+								<span style="color: blue">class</span> 
+								 Usuario(<span style="color: blue"> var</span> nome: String, 
+								<span style="color: blue"> val</span> senha: String){ <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								...<br /> } <br />
+								
+								<p style="color: green">//A variável nome pode ser alterada </p> 
+								<p style="color: green">//A variável senha não pode ser alterada </p> 
+		
+							</div>
+						</div>
+						
+						<br/><br/>
+						
+						<h5 align="left"> Classes com construtores secundários: </h5>
+						
+						<p align="left" class="lead">
+			    		  	 O construtor secundário deve ser declarado com a chave <span style="color: blue"> constructor </span>.  
+                        </p>
+                        
+                        <div class="panel panel-default">
+							<div class="panel-heading">Declarando Classe com construtor secundário</div>
+							<div class="panel-body" align="left">
+		
+								<span style="color: blue">class</span> Carro 
+								(<span style="color: blue"> var</span> nome: String)
+								{ <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span style="color: blue">constructor</span> ( nome: String, rodas: Int): 
+								<span style="color: blue">this </span>(nome){
+								<br />...<br /> } <br />
+								<p style="color: green">//Dois construtores (1 e 2 parâmetros) </p> 
+		
+							</div>
+						</div>
+						
+						
+						<br/><br/>
+						
+						<h5 align="left"> Instanciar uma Classe: </h5>
+						
+						<p align="left" class="lead">
+			    		  	 Diferente de outras linguagens de programação como Java, ao criar uma
+			    		  	 instância de uma Classe não precisamos declarar a palavra
+			    		  	 chave "<span style="color: blue">new</span>".  
+                        </p>
+                        
+                        <div class="panel panel-default">
+							<div class="panel-heading">Criando uma instância de uma Classe</div>
+							<div class="panel-body" align="left">
+		
+								<span style="color: blue">val</span> teste = Teste( )<br/> 
+								<span style="color: blue">val</span> carro = Carro("Celta")<br/> 
+		
+							</div>
+						</div>
+
+						<br/><br/>
+						
+						<h5 align="left"> Data Classes: </h5>
+
+						<p align="left" class="lead">
+							<b>Data Class</b> é uma classe similar ao <b>POJO</b>(Plain Old Java Objects) do Java, mas bem mais
+							expressiva, escrevendo poucas linhas de código.
+						</p>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">Criando uma data Classe</div>
+							<div class="panel-body" align="left">
+		
+								<span style="color: blue">data class</span> Usuario
+								(<span style="color: blue">val</span> nome: String, 
+								<span style="color: blue"> val</span> idade: Int)
+		
+							</div>
+						</div>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">Criando e usando uma instância de uma data Classe</div>
+							<div class="panel-body" align="left">
+		
+								<span style="color: blue">val</span> usuario = Usuario("Sidney", 38)<br/> 
+								println("Nome: " + usuario.nome) <br/> 
+		                        <span style="color: green">//Nome: Sidney</span><br/> 
+							</div>
+						</div>
+						
+						
+						<br/><br/>
+						
+						<h5 align="left"> Classes Enum: </h5>
+
+						<p align="left" class="lead">
+							A classe do tipo Enum pode ser declarado de algumas formas: 
+						</p>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">Formas de escrever uma classe Enum</div>
+							<div class="panel-body" align="left">
+		
+								<span style="color: blue">enum class</span> Carro { 
+								<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    								CELTA, CORSA, OMEGA <br/>
+								}
+								<br/><br/>
+								<span style="color: green">//ou assim: </span><br/> <br/>
+								<span style="color: blue">enum class</span> Cor (val codigo: Int) { 
+								<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								AZUL(0),
+								<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        						VERDE(1),
+        						<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        						VERMELHO(2)
+								<br/>}
+		
+							</div>
+						</div>
+						
+						
+						<br/><br/>
+                         
+                        <h3 align="center"> Herança </h3>
+
+						<p align="left" class="lead">
+							Em Kotlin, por padrão, todas as classes herdam a classe <b>Any</b>. A classe <b>Any</b> não é 
+							a classe <b>java.lang.Object</b>.<br/>
+							A super classe sempre deve conter o modificador <span style="color: blue">open </span>
+						</p>
+						
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">Exemplo de herança em Kotlin</div>
+							<div class="panel-body" align="left">
+		                         <span style="color: green">//Super classe Animal</span><br/> 
+								<span style="color: blue">open class </span> Animal(nome: String)<br/> <br/><br/>
+								<span style="color: green">//Classe Gato herdando Animal</span><br/> 
+								<span style="color: blue">class </span>Gato(nome: String) : Animal(nome)<br/> 
+		
+							</div>
+						</div>
+						
+						
+						<br/><br/>
+						
+						<h5 align="left"> Classes Abstrata: </h5>
+						
+						<p align="left" class="lead">
+							Uma classe abstrata é uma classe que não pode ser instanciada, somente herdada.
+						</p>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">Exemplo de uma classe abstrata</div>
+							<div class="panel-body" align="left">
+		                        
+								<span style="color: blue">abstract class </span> Funcionario {<br/> 
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span style="color: blue">fun  </span> trabalha()<br/>
+		                        }
+							</div>
+						</div>
+						
+						
+						<br/><br/>
+						
+						 <h3 align="center"> Interfaces </h3>
+                         
+                         <p align="left" class="lead">
+			    		  	 A Interface em Kotlin é um pouco diferente de outras linguagens como C# ou Java. As diferenças são que
+			    		  	 em kotlin a Interface pode ter implementação(a partir do Java 7 tem essa feature utilizando na assinatura 
+			    		  	 o modificador "default") e a classe implementadora não é obrigado a declarar os métodos da Interface.<br/>	    		  	 
+			    		  	 Podemos implementar quantas interfaces quisermos.
+                         </p>
+                         
+                         
+                         <div class="panel panel-default">
+							<div class="panel-heading">Exemplo de uma Interface e sua implementação</div>
+							<div class="panel-body" align="left">
+							
+							
+							   <span style="color: blue">interface</span> Funcionario { 
+							   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               <span style="color: blue">fun </span>getSalario()
+                               <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               <span style="color: blue">fun </span>getTrabalhar(){
+                               <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               print("Trabalhando...")
+                               <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   							   }<br/>
+							   }
+							   
+							   
+							   <br/><br/><p style="color: green">//Implementação: </p> 
+							   
+							   <span style="color: blue">class</span> Gerente : Funcionario {
+							   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    						   <span style="color: blue">override fun </span>getSalario() {
+    						   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        					   print("R$ 1.000.000,00");
+                               <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							   }<br/>
+							   }
+		                        
+								
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+						 
+				 
+				</div>		 
+              </div>             
+             
+	   </article>
+	
+
+	 <!-- Contact -->
+	  <section id="contact" class="home-section bg-white">
+	  	<div class="container">
+			 
+	  		
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+						
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+						
+					</ul>
+				</div>				
+			</div>
+
+	  	</div>
+	  </section>  
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy;2014 Mamba company. All rights reserved. By <a href="http://bootstraptaste.com">Bootstraptaste</a></p>
+				</div>
+			</div>		
+		</div>	
+	</footer>
+	 
+	 <!-- js -->
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+  	</body>
+</html>
