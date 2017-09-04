@@ -31,7 +31,7 @@
 </head>
 
 <!--  Thumb -->
-<img src="../../img/works/20170827/armor.png" alt=""
+<img src="../../img/works/20170903/openClose.jpg" alt=""
 	style="display: none;" />
 
 
@@ -56,7 +56,7 @@
 	<div align="center">
 
 		<img class="img-responsive" alt="" 
-			src="../../img/works/20170827/armor.png" />
+			src="../../img/works/20170903/openClose.jpg" />
 
 	</div>
 
@@ -75,15 +75,8 @@
 				<h2 align="center">Solid - Introdução ao SOLID.</h2>
 
 				<p align="left" class="lead">
-					Solid é um acrônimo para 5 princípios de desenvolvimento. Princípios definidas pelo engenheiro
-					de software Robert Martin(Uncle Bob). Desenvolver de forma concisa e manter o código limpo de forma expressiva 
-					fazem parte dos princípios sólidos.<br/> 
-					Segue cada parte do acrônimo S.O.L.I.D:<br/> <br/> 
-					<b>Princípio da responsabilidade única</b> (SRP - Single responsability principle), <br/>
-					<b>Princípio Aberto/Fechado </b>(OCP - Open Closed Principle), <br/>
-					<b>Princípio da substituição de Liskov </b>(LSP - Liskov substitution principle),<br/>
-					<b>Principio de segregação de interfaces</b> (ISP - Interface segregation principle) e <br>
-					<b>Princípio de inversão de dependência</b> (DIP - Dependency inversion principle).
+					Continuando sobre os princípios sólidos, vamos falar sobre o princípio do 
+					aberto fechado.
 				</p>
 				<br />
 
@@ -92,8 +85,8 @@
 				<p align="left" class="lead">
 					
 					
-					<a href="#">1 - Single responsability principle - Princípio da responsabilidade única; </a><br/>
-					2 - Open Closed Principle - Open Closed Principle; <br/>
+					<a href="/article/solid.html">1 - Single responsability principle - Princípio da responsabilidade única; </a><br/>
+					<a href="#">2 - Open Closed Principle - Princípio do aberto e fechado; </a><br/>
 					3 - Liskov substitution principle - Princípio da substituição de Liskov; <br/>
 					4 - Interface segregation principle - Principio de segregação de interfaces; <br/>
 					5 - Dependency inversion principle - Princípio de inversão de dependência. <br/>
@@ -103,82 +96,66 @@
 				<br />
 
 				
-				<h5 align="left">Single responsability principle (Princípio da responsabilidade única)</h5>
+				<h5 align="left">Open Closed Principle (Princípio do aberto e fechado)</h5>
 				<p align="left" class="lead">
-						O princípio da responsabilidade única tem como compromisso garantir que a classe tenha somente um 
-						motivo para ser modificada, sendo assim a classe só pode tem uma responsabilidade. <br/>
- 						Ter uma responsabilidade não quer dizer que a classe vai ser composta de 1 método, a classe pode 
- 						ter alguns métodos mas métodos que façam sentido, não vamos colocar o método fazerCafe na classe 
- 						Carro, não faz sentido nenhum. <br/>
-                        Ainda usando como exemplo a classe Carro, imagine essa classe com os seguintes métodos:
+						Open Closed Principle ou princípio do aberto e fechado é o segunda letra do acrônimo SOLID. 
+						O que prega esse princípio: "Aberto para extensão mas fechado para modificação". O que significa isso, 
+						quando precisamos adicionar um novo comportamento a função, estendemos a funcionalidade criando outra, 
+						isso  evita aqueles problemas de parar de funcionar o que já estava implementado. Essa princípio 
+						utiliza praticamente o design pattern Strategy.
                 
 				<p/>    
 				
-				<div class="panel-body" align="left">
-					<ul >
-					    <li>acelera()</li>
-				        <li>freia()</li>
-						<li>ligaFarol()</li>
-						<li>desligaFarol()</li>		 
-					</ul>
-				</div>		
-			
-				
-                <p align="left" class="lead">
-                	Segue o diagrama de classe:
-				</p>
-				
-				<img class="img-responsive" alt="" src="../../img/works/20170827/DiagramaCarro.png" />
-				
-				<br/>
-				
 				<p align="left" class="lead">
-                	Segue a classe Carro:
-				</p>
-				
-			   <div>
-			      <script src="https://gist.github.com/sidneynakatani/8017eb0622dd5bf4f54f405483833ced.js"></script>
-			   </div>
+						Vamos analisar o código abaixo:
+				<p/>    
 				
 				
-				<br/><br/>
-				<p align="left" class="lead">
-					Muita responsabilidade para a classe Carro, podemos dividir essas responsabilidades em mais 2 classes:
-                </p>
-                
-                
-                <img class="img-responsive" alt="" src="../../img/works/20170827/CarroImpl.png" />
-                
-                 <br/><br/>
-                
-                 <div>
-				
-					 <script src="https://gist.github.com/sidneynakatani/e7c7ae7c0bc694461010090be91ab252.js"></script>
-					 <script src="https://gist.github.com/sidneynakatani/7a5df68725adfbccec1982a23b0307b9.js"></script>
-					 <script src="https://gist.github.com/sidneynakatani/e0463f73bb57c09c4b43b51d7c5bc14d.js"></script>
-				  
+				<div>
+				    <script src="https://gist.github.com/sidneynakatani/0bd41b97e98e82825158638813529b0a.js"></script>
 				</div>
 				
-				<br/><br/>
-
-
-				<p align="left" class="lead">Criamos mais duas classes,
-					<b>ModuloEletrico</b> responsável por ligar e desligar o farol e o
-					<b>ModuloMecanico</b> responsável por acelerar e frear. <br/>
-					Repare que agora cada classe tem sua responsabilidade, isso ajuda na sua modificação
-					pois fica mais fácil de encontrar onde precisamos modificar em casos de correções e melhorias.
-					
-				</p>
-				
-				<p align="left" class="lead">Utilizando esse principio, modificar
-					o código fica menos sujeito a erros, principalmente quando
-					trabalhamos em equipes pois podemos trabalhar em partes isoladas no
-					código.
-				</p>
+				<p align="left" class="lead">
+					Observe que a classe foi criado prevendo somente 2 meios de pagamentos(<b>Débito e Cartão de Crédito</b>). 
+					Mas o que acontece se algum dia precisarmos modificar o método para atender a capacidade de efetuar o 
+					meio de pagamento <b>"Boleto"</b>? A forma mais rápida seria colocar mais um <i>"if"</i> e uma constante  
+					<i>"BOLETO"</i> para atender essa nova forma de pagamento. <br/>
+	 				O problema agora é que essa implementação pode gerar erros nos fluxos de pagamentos que já existiam
+	 				(Débito e Cartão de crédito), e mais, vamos ter que testar todo fluxo novamente para garantir a integridade do método.
+				<p/>  
 				
 				<p align="left" class="lead">
-				   A cada semana vou postar 1 princípio até totalizar 5.
+					 Como podemos resolver esse problema aplicando o princípio do aberto e fechado? <br/>
+					 A ideia é aplicar o design pattern <b>Strategy</b>, criando uma interface e suas implementações. <br/>
+					 Abaixo apresentamos uma interface <i>Ipagamento: </i><br/>
+			    <p/> 
+			    
+			    <div>
+			    	<script src="https://gist.github.com/sidneynakatani/e9b1a96653ed841ea2c6008c311f2277.js"></script>
+			    </div>
+			    
+			    <p align="left" class="lead">
+			    	Essa interface contém todos os métodos que as implementações podem utilizar.
+				<p/>
+				
+				<p align="left" class="lead">
+					Agora criamos duas implementações da interface IPagamento, Debito e CartaoCredito. 
+				<p/>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/1a68c6f3b081e3d34bd8f7a1dd5ca800.js"></script>
+				</div>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/0cf0b9d9a01d4518b6cab0a58d4c84ad.js"></script>
+				</div>
+				
+				<p align="left" class="lead">
+					Dessa forma, implementar a forma de pagamento Boleto fica isolado das outras capacidades, 
+					não corre o risco de parar de funcionar outras capacidades e não tem o retrabalho de testar 
+					todas as capacidades já implementadas. 
 				</p>
+				
 				
 			</div>
 	  </div>
