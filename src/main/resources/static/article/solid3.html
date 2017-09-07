@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20170910/bird.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20170910/bird.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Solid - Introdução ao SOLID.</h2>
+
+				<p align="left" class="lead">
+					Continuando sobre os princípios sólidos, vamos falar sobre o princípio 
+					da substituição de Liskov.
+				</p>
+				<br />
+
+				<h3 align="left">Os 5 princípios</h3>
+
+				<p align="left" class="lead">
+					
+					
+					<a href="/article/solid.html"> 1 - Single responsability principle - Princípio da responsabilidade única; </a><br/>
+					<a href="/article/solid2.html">2 - Open Closed Principle - Princípio do aberto e fechado; </a><br/>
+					<a href="#"> 3 - Liskov substitution principle - Princípio da substituição de Liskov; </a><br/>
+					4 - Interface segregation principle - Principio de segregação de interfaces; <br/>
+					5 - Dependency inversion principle - Princípio de inversão de dependência. <br/>
+                <p/>
+
+				<br />
+				<br />
+
+				
+				<h5 align="left">Liskov substitution principle - (Princípio da substituição de Liskov)</h5>
+				<p align="left" class="lead">
+					Liskov Principle  ou princípio de substituição de Liskov. Esse princípio detém o  
+					nome Liskov devido a sua criadora a professora da faculdade de MIT Bárbara Liskov e 
+					Jeannette Wing, vice-presidente da Microsoft Research.
+					             
+				<p/>    
+				
+				<p align="left" class="lead">
+					Esse princípio utilizamos o conceito <b>“É um”</b>, onde herdamos na sub-classe as caracteristicas da classe base.<br/>
+					Esse princípio é  um pouco complexo de  entender  seu conceito pois passa por cima de alguns conceitos que 
+					aprendemos, nesse caso a teoria do <b>“É um”</b>.<br/>
+					Por exemplo, imagine a classe <i>Ave</i>, onde existem os métodos <b>come</b>, <b>dorme</b> e <b>voa</b>.
+					Agora se herdarmos a classe <i>Ave</i> na classe <i>Galinha</i> vamos ter um problema, apesar da classe 
+					<i>Galinha</i> ser uma Ave, a classe <i>Galinha</i> não voa. 
+				<p/>    
+				
+				<p align="left" class="lead">
+					Vamos exemplificar isso programáticamente:
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/feb8f7bdd77182adb599e6683029b165.js"></script>
+				</div>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/ac5e19f3a45467ce547bf32cd6453cb3.js"></script>
+				</div>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/e46ee951d03ec9e35e984599f0fcd273.js"></script>
+				</div>
+				
+				<p align="left" class="lead">
+					Veja que a classe <i>Pardal</i> não tem problema algum, pois o Pardal voa, come e dorme. 
+					No caso da classe <i>Galinha</i>, a regra de Liskov foi quebrada pois a Galinha come e dorme, 
+					mas não voa, sendo assim não vamos utilizar essa capacidade.
+				</p>
+				
+				<p align="left" class="lead">
+					Como podemos corrigir esse problema? Separarmos os subtipos:
+				</p>
+				
+				
+				<p align="left" class="lead">
+				   Criamos duas interfaces bases com capacidades separadas
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/2740bf5e093ad59007891ae06ad7e9b0.js"></script>
+				</div>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/91fc0389fdd4d50c78db6cad261ac889.js"></script>
+				</div>
+				
+				<p align="left" class="lead">
+				   Implementamos as interfaces somente com as capacidades utilizadas: 
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/084fee8cbdad3ba531c66fa7f4513cc3.js"></script>
+				</div>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/8b555134012157e3040acf537ccdaf9f.js"></script>
+				</div>
+				
+				
+			</div>
+	  </div>
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
