@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20170917/interfaces.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20170917/interfaces.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Solid - Introdução ao SOLID.</h2>
+
+				<p align="left" class="lead">
+					Continuando sobre os princípios sólidos, vamos falar sobre o princípio 
+					de segregação de interfaces.
+				</p>
+				<br />
+
+				<h3 align="left">Os 5 princípios</h3>
+
+				<p align="left" class="lead">
+					
+					
+					<a href="/article/solid.html"> 1 - Single responsability principle - Princípio da responsabilidade única; </a><br/>
+					<a href="/article/solid2.html">2 - Open Closed Principle - Princípio do aberto e fechado; </a><br/>
+					<a href="/article/solid3.html"> 3 - Liskov substitution principle - Princípio da substituição de Liskov; </a><br/>
+					<a href="#">4 - Interface segregation principle - Princípio de segregação de interfaces;</a><br/>
+					5 - Dependency inversion principle - Princípio de inversão de dependência. <br/>
+                <p/>
+
+				<br />
+				<br />
+
+				
+				<h5 align="left">Interface segregation principle - (Princípio de segregação de interfaces)</h5>
+				<p align="left" class="lead">
+					Interface Segregation Principle ou Princípio da Segregação de Interface consiste em separar as responsabilidades por 
+					interfaces.
+					Se a classe implementadora manter um método da interface que não usa, tem alguma coisa errada e está quebrando 
+					o Princípio da Segregação de Interface.<br/>
+					Esse princípio é muito parecido com o princípio de Liskov, inclusive a solução é a mesma.
+					             
+				<p/>    
+				
+				
+				<p align="left" class="lead">
+					Vamos exemplificar isso programaticamente:
+				</p>
+				
+				<p align="left" class="lead">
+					Observe a interface <b><i>Trabalhador</i></b> e seus métodos <i>trabalhar, comer e dormir.</i>
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/e2fa51ba89e180967270791e7d4ba52d.js"></script>
+				</div>
+				
+				<p align="left" class="lead">
+					Vamos implementar nas classes <b><i>Home e Mulher</i></b>
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/59f40d468cf4165642b18a1494afd104.js"></script>
+				</div>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/54bc7d3e2da866ba63608d0e3426edb7.js"></script>
+				</div>
+				
+				<p align="left" class="lead">
+					Veja que a classe <i>Homem</i> e <i>Mulher</i> utilizam todos os métodos <i><b>trabalhar</b></i>,
+					<i><b>comer</b></i> e <i><b>dormir</b></i>.
+				</p>
+				
+				
+				<p align="left" class="lead">
+					Mas e se criar uma classe <i>Robo</i>? O robô utiliza o método <i><b>trabalhar</b></i>,
+					mas não vai utilizar os métodos <i><b>comer</b></i> e <i><b>dormir</b></i>.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/745281c05c714808a1fde3d4dc3ec8a4.js"></script>
+				</div>
+				
+				<br />
+				<br />
+				
+				<p align="left" class="lead">
+					Como podemos corrigir esse problema? Segregamos em 2 interfaces.
+				</p>
+				
+				
+				<p align="left" class="lead">
+				   Criamos duas interfaces com capacidades separadas:
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/92b3851e5957110e86a77d9f59f71910.js"></script>
+				</div>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/c3d281adce3f9426d276eb0ca32e8e1e.js"></script>
+				</div>
+				
+				<br />
+				<br />
+				
+				<p align="left" class="lead">
+				   Implementamos as interfaces somente com as capacidades utilizadas: 
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/628c1e03008ace54b7fe088369e418c0.js"></script>
+				</div>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/8c9a9c54ee0206641711d27da6920374.js"></script>
+				</div>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/a9384edb96cdb9676532176cc4d3908a.js"></script>
+				</div>
+				
+				
+				
+			</div>
+	  </div>
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
