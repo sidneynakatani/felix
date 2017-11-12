@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20171111/binoculo.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20171111/binoculo.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Design pattern Observer.</h2>
+
+				<p align="left" class="lead">
+					O <b>Observer</b> é um padrão de projeto comportamental. <br/>
+					Esse tipo de padrão de projeto é utilizado quando se torna necessário a relação 1 para muitos
+					objetos e os muitos objetos precisam ser notificados quando existe alguma alteração no objeto
+					principal.<br/>
+					Um exemplo prático seria 3 interfaces gráficas diferentes que exibem as informações de formas 
+					diferentes mas utilizam 1 fonte de informação principal.
+					
+				</p>
+				
+				<br />
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20171111/observer.jpeg" />
+					<p align="center">Diagrama exemplificando utilização do Observer.</p>
+				</div>
+				
+				<br />
+
+				<h3 align="left">Como funciona o Observer.</h3>
+
+				<p align="left" class="lead">
+					O pattern <b>Observer</b> descreve como estabelecer o relacionamento entre os objetos <b>subject</b>(assunto)
+					e <b>observer</b>(observador).<br/>
+					Um <b>Subject</b> pode notificar vários <b>Observer's</b> que este 
+					ficará aguardando as atualizações.<br/>
+					O padrão Observer também é conhecido por Publisher-Subscriber.
+				</p>
+				
+				
+				<br/>
+				
+				
+				<h3 align="left">Exemplo na prática(Java).</h3>
+				
+				<p align="left" class="lead">
+					Vamos criar um exemplo de como implementar o padrão <b>Observer</b> utilizando Java.
+				</p>
+				
+				<p align="left" class="lead">
+					Primeiro vamos criar um <b>Subject</b> que vai ser responsável por receber os <b>Observer's</b>
+					e notificá-los:
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/9ead01a8e5b6adbe3a0edf2f1fba41e1.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Agora criamos uma classe abstrata <b>Observer</b>:
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/3058b3a09b3448b565fc6d6e08ed2375.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				
+				<p align="left" class="lead">
+					Criamos as classes concretas para o <b>Observer</b>:
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/fc12c2ed071176f38036d203fcaa430f.js"></script>
+				</div>
+				
+				<br/>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/ad01bfbc97ca3c3cddcc3dbe5ee9e7eb.js"></script>
+				</div>
+				
+				<br/>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/ee2fe2c8a552b18ed2989da491827329.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				
+				<p align="left" class="lead">
+					Criamos a classe <i>Main</i> para testar:
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/b35376ea5160dd3aac1796af66274d21.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<h3 align="left">Executando aplicação.</h3>
+				
+				<p align="left" class="lead">
+					Todos os Observer's foram notificados pelo Subject:
+				</p>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20171111/test.jpeg" />
+			    </div>
+			    
+			    <br/>
+			    
+				
+				<br/><br/><br/>
+				
+				<h3>Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					O padrão <b>Observer</b> pode ser útil em casos onde precisamos mudar o estado de um objeto
+					a partir de um outro objeto que ficará responsável por fazer essa notificação. 
+				</p>
+
+			</div>
+	  </div>
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
