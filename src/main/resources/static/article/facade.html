@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20171217/fachada.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20171217/fachada.jpg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Design pattern Facade.</h2>
+
+				<p align="left" class="lead">
+					O <b>Facade</b> é um padrão de projeto estrutural. <br/>
+					A motivação para utilizar o padrão de projeto Facade é encapsular toda camada 
+					com métodos complexos, escondendo a regra de negócio do cliente em uma interface
+					de nível maior.
+				</p>
+				
+				<p align="left" class="lead">
+					Agrupando todos os métodos em uma classe centralizadora que vai expor os métodos 
+					sem exibir a parte complexa.<br/>
+					Uma <strong>API</strong>(Application Programming Interface) pode ser considerado
+					uma <strong>Facade</strong>, pois a API vai exibir uma interface com os métodos
+					escondendo a parte complexa.
+				</p>
+				
+				
+				<p align="left" class="lead">
+					Um exemplo, seria um projeto para criar diversas formas geométricas e expor somente
+					uma interface para o cliente utilizar seus métodos sem expor a regra de negócio.
+				</p>
+				
+			
+				<br />
+
+				<h3 align="left">Como funciona o Facade.</h3>
+
+				<p align="left" class="lead">
+					O pattern <b>Facade</b> exibe um design onde podemos centralizar uma classe de
+					"<strong>fachada</strong>" exibindo todos métodos sem expor sua complexidade.
+				</p>
+				
+				
+				<p align="left" class="lead">
+					Esse modelo de negócio ajuda a simplificar e unificar o acesso aos métodos com 
+					complexidade maior, fazendo com que o código fique mais organizado e limpo. 
+				</p>
+				
+				<br/><br/>
+				
+				<div align="center">
+
+					<img class="img-responsive" 
+					     alt="Diagrama Facade" 
+						 src="../../img/works/20171217/facade.png"/>
+						
+					<p align="center">
+						Diagrama Facade
+					</p>
+					
+				</div>
+				
+				
+				<br/><br/>
+				
+				
+				<h3 align="left">Exemplo na prática(Java).</h3>
+				
+				<p align="left" class="lead">
+					Vamos criar um exemplo de como implementar o padrão <b>Facade</b> utilizando Java.
+				</p>
+				
+				<p align="left" class="lead">
+					Criamos uma Interface <i><b>Shape</b></i>.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/08ba71510a6686946039ebd2e688c7c7.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe implementadora <b><i>Circle</i></b>.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/9f6d7bbb16a53917a4f1fc425a2cd9ab.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe implementadora <b><i>Square</i></b>.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/c6ed8f4e3f1425e64d88458dfe892ce0.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe implementadora <b><i>Triangle</i></b>.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/476511a7851632c11d7930f935900335.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				
+				
+				<p align="left" class="lead">
+					Criamos a classe Facade <b><i>ShapeFacade</i></b> responsável por encapsular todos os 
+					métodos e centralizar somente nessa interface.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/a02ef8c0bf90468d0b943c2a6b03ab2c.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+							
+				<p align="left" class="lead">
+					Criamos a classe <b><i>FacadeDemo</i></b> para testar:
+				</p>
+				
+				<p align="left" class="lead">
+					Nesse teste, instanciamos nossa classe Facade(ShapeFacade) que centraliza todos os métodos 
+					e executamos a partir dela.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/3092b4271c1537d0094bc5f09f79deed.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<h3 align="left">Executando a aplicação.</h3>
+				
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20171217/teste.jpeg" />
+			    </div>
+			    
+			    <br/>
+			    
+				
+				<br/><br/><br/>
+				
+				<h3>Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					O padrão <b>Facade</b> pode ser utilizado quando existe a necessidade de separar 
+					a parte complexa como regras de negócio da parte de exibição. O mecanismo de 
+					<strong>API</strong> mostra exatamente como um <strong>Facade</strong> funciona.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
