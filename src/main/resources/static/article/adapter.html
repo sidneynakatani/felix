@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20171225/ratchet.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20171225/ratchet.jpg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Design pattern Adapter.</h2>
+
+				<p align="left" class="lead">
+					O <b>Adapter</b> é um padrão de projeto estrutural. <br/>
+					A motivação de utilização do padrão de projeto <strong>Adapter</strong> é utilizar uma 
+					única interface de entrada para acessar outros tipos implementações, desde que 
+					o resultado final seja o mesmo esperado.
+				</p>
+				
+				<p align="left" class="lead">
+					Imagine um sistema legado que faça uma tarefa que receba como parâmetros <strong>X</strong>,
+					<strong>Y</strong>, <strong>Z</strong>. Agora imagine que precisamos adaptar uma nova 
+					API que faça a mesma tarefa mais rápido, mas não podemos alterar a interface legado de 
+					entrada e para ajudar, a nova API recebe como parâmetros <strong>Y</strong>, <strong>X</strong>,
+					<strong>Z</strong>. <br/>
+					Perceba que apesar do resultado final ser o mesmo do sistema legado, os parâmetros de entrada 
+					estão em ordem diferente. Mesmo que tivéssemos o código fonte dessa API, não seria uma 
+					boa prática alterar o código da API para uma nova implementação.<br/>
+					Nesse momento é que entra a implementação de um <strong>Adapter</strong>.
+				</p>
+				
+				
+				<p align="left" class="lead">
+					Podemos exemplificar a utilização do <strong>Adapter</strong> em um sistema que gera 
+					um retângulo a partir de 2 coordenadas: Altura e Largura. Nesse mesmo sistema legado,
+					precisamos adaptar uma nova API que vai fazer a mesma tarefa, mas os parâmetros de 
+					entrada estão invertidos.
+				</p>
+				
+			
+				<br />
+
+				<h3 align="left">Como funciona o Adapter.</h3>
+
+				<p align="left" class="lead">
+					O pattern <b>Adapter</b> exibe um design onde podemos utilizar classes com 
+					interfaces incompatíveis adaptando essa interface para um resultado que 
+					o cliente espera.				
+				</p>
+				
+				
+				<p align="left" class="lead">
+					Esse padrão funciona muito bem quando não podemos alterar a interface do sistema legado
+					com implementações novas.
+				</p>
+				
+				
+				<br/><br/>
+				
+				
+				<h3 align="left">Exemplo na prática(Java).</h3>
+				
+				<p align="left" class="lead">
+					Vamos criar um exemplo de como implementar o padrão <b>Adapter</b> utilizando Java.
+				</p>
+				
+				<p align="left" class="lead">
+					Criamos uma Interface <i><b>Retangle</b></i>.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/a1432d4fd504165d486121b22d5c9d35.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe implementadora <b><i>RetangleImpl</i></b>, que é nossa classe legado.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/9210885939fc44058371b085b92f5c72.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe <b><i>NewRetangle</i></b>, que vai ser a nova API.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/47ef9de5b3570a965d5bfe70ee540125.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe <b><i>RetangleAdapter</i></b>, que vai ser nossa classe adaptadora.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/021cc43bd58071d6d53a71ea9ff17bfb.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+					
+				<p align="left" class="lead">
+					Criamos a classe <b><i>AdapterDemo</i></b> para testar:
+				</p>
+				
+				<p align="left" class="lead">
+					Nesse teste executamos as duas versões de <i>Retangle</i>(Legado e Nova API) passando 
+					os parâmetros em ordens diferentes. Depois utilizando a nova API utilizando o adapter
+					sem alterar a interface de entrada.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/fd2dbc8c8612eee22ef4742aee228b2c.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<h3 align="left">Executando a aplicação.</h3>
+				
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20171225/teste.jpeg" />
+			    </div>
+			    
+			    <br/>
+			    
+				
+				<br/><br/><br/>
+				
+				<h3>Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					O padrão <b>Adapter</b> pode ser utilizado quando existe a necessidade de não
+					alterar a interface de entrada adaptando a interface da nova capacidade ou API 
+					com a já existente.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
