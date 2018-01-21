@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180121/decorator.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180121/decorator.jpg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Design pattern Decorator.</h2>
+
+				<p align="left" class="lead">
+					O <strong>Decorator</strong> é um padrão de projeto estrutural. <br/>
+					A motivação de utilização do padrão de projeto <strong>Decorator</strong> 
+					é incluir funcionalidades dinamicamente em tempo de execução. 
+				</p>
+				
+				<p align="left" class="lead">
+					O <strong>Decorator</strong> permite agregar novas capacidades ao 
+					objeto e somente ao Objeto, diferente de Herança onde adicionamos
+					as capacidades para todos os objetos.
+				</p>
+				
+				
+				<p align="left" class="lead">
+					Podemos exemplificar a utilização do padrão <strong>Decorator</strong>
+					em um sistema que monta diferentes tipos de pratos, com diversos
+					ingredientes e cada item com seu respectivo preço. Ao final, o 
+					sistema deve exibir o valor do produto final conforme o prato e os
+					ingredientes utilizados.
+				</p>
+				
+			
+				<br />
+
+				<h3 align="left">Como funciona o Decorator.</h3>
+
+				<p align="left" class="lead">
+					O pattern <b>Decorator</b> exibe um design onde podemos agregar novas 
+					funcionalidades dinamicamente.
+				</p>
+				
+				<p align="left" class="lead">
+					Por adicionar as funcionalidades somente ao objeto, o Decorator tem uma 
+					flexibilidade maior que uma Herança.
+				</p>
+				
+				
+				<br/><br/>
+				
+				
+				<h3 align="left">Exemplo na prática(Java).</h3>
+				
+				<p align="left" class="lead">
+					Vamos criar um exemplo de como implementar o padrão <b>Decorator</b> utilizando Java.
+				</p>
+				
+				<p align="left" class="lead">
+					Criamos uma classe abstrata <i><b>Dish</b></i> que vai ser a base para as demais classes 
+					concretas que vamos utilizar para criar os diferentes pratos.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/6fae6bd1e9538ae6205506b90451949b.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe concreta <b><i>Pasta</i></b> para nosso primeiro prato.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/e7144616f8f5bbadc58fadcee5b26171.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe concreta <b><i>Soup</i></b> para nosso segundo prato.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/7bd9628f7227c6e21474f578d0ab88a8.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe <b><i>DishDecorator</i></b> que é a classe responsável por adicionar as
+					novas capacidades no objeto.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/e45c38b6cd11ad75de7b280898963ed9.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				
+				<p align="left" class="lead">
+					Criamos a classe <b><i>Onion</i></b> para nosso primeiro ingrediente.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/d4f7b51b9b79235a0ae3f123a5f9342f.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe <b><i>Tomato</i></b> para nosso segundo ingrediente.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/1500814d6c034ae4c3fc345aa3586bd1.js"></script>
+				</div>
+				
+				
+				<br/><br/>
+				
+					
+				<p align="left" class="lead">
+					Criamos a classe <b><i>DecoratorDemo</i></b> para testar:
+				</p>
+				
+				<p align="left" class="lead">
+					Nesse teste, criamos 2 pratos: <br/>
+					- Sopa com Tomate e Cebola;<br/>
+					- Macarrão com Tomate.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/c27d339030fa85c976e8978934ae1d1f.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<h3 align="left">Executando a aplicação.</h3>
+				
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20180121/test.jpeg" />
+			    </div>
+			    
+			    <br/>
+			    
+				
+				<br/><br/><br/>
+				
+				<h3>Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					O padrão <b>Decorator</b> é útil quando existe a necessidade de 
+					agregar uma nova funcionalidade ao objeto em uso, sem modificar 
+					outros objetos como acontece em Herança.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
