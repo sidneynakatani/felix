@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180127/keyboard.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180127/keyboard.jpg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Design pattern Command.</h2>
+
+				<p align="left" class="lead">
+					O <strong>Command</strong> é um padrão de projeto comportamental. <br/>
+					A motivação de utilização do padrão de projeto <strong>Command</strong> 
+					é encapsular uma solicitação como objeto, permitindo o cliente parametrizar
+					várias solicitações. 
+				</p>
+				
+				<p align="left" class="lead">
+					O <strong>Command</strong> permite baixar grandes quantidades de 
+					condicionais. Além disso, esse padrão pode ser usado para desfazer 
+					uma solicitação e auditar os processos.
+				</p>
+				
+				
+				<p align="left" class="lead">
+					Podemos exemplificar a utilização do padrão <strong>Command</strong>
+					em um sistema vendas com várias formas de pagamentos. Mas queremos
+					abstrair as formas de pagamento pois podem existir várias formas de 
+					pagar e futuramente incluir outras formas de pagamentos.
+				</p>
+				
+			
+				<br />
+
+				<h3 align="left">Como funciona o Command.</h3>
+
+				<p align="left" class="lead">
+					O pattern <b>Command</b> exibe um design onde podemos abstrair solicitações.
+				</p>
+				
+				<p align="left" class="lead">
+					Uma vez abstraindo solicitações, o padrão ajuda diminuir quantidades
+					significativas de condicionais.
+				</p>
+				
+				
+				<br/><br/>
+				
+				
+				<h3 align="left">Exemplo na prática(Java).</h3>
+				
+				<p align="left" class="lead">
+					Vamos criar um exemplo de como implementar o padrão <b>Command</b> utilizando Java.
+				</p>
+				
+				<p align="left" class="lead">
+					Criamos uma classe <i><b>Product</b></i> para cadastrar um produto e seu valor.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/8e1a3bc36c35ed3ed5c9062c11c22238.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a interface <b><i>Payment</i></b> que vai ser nosso contrato para as formas de pagamento.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/2851aa3668b692a82c5c189c35e69099.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe Implementadora <b><i>Debit</i></b> para a interface Payment.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/3a4cf0d0414fd537222ceae907706b22.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<p align="left" class="lead">
+					Criamos a classe Implementadora <b><i>CreditCard</i></b> para a interface Payment.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/69463452ecddcaa8a65a3b16b98f60b3.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				
+				<p align="left" class="lead">
+					Criamos a classe <b><i>SellMachine</i></b> para centralizar as vendas e formas de pagamentos.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/07c9813d1986dac07f5fd65e7769ffa5.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+					
+				<p align="left" class="lead">
+					Criamos a classe <b><i>CommandDemo</i></b> para testar:
+				</p>
+				
+				<p align="left" class="lead">
+					Nesse teste, instanciamos 2 produtos e executamos as vendas em 2 formas de 
+					pagamentos diferentes.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/b0d92c9cc6a2502e0b7b5f99eeaa0951.js"></script>
+				</div>
+				
+				<br/><br/>
+				
+				<h3 align="left">Executando a aplicação.</h3>
+				
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20180127/test.jpeg" />
+			    </div>
+			    
+			    <br/>
+			    
+				
+				<br/><br/><br/>
+				
+				<h3>Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					O padrão <b>Command</b> é útil quando existe a necessidade de 
+					encapsular e/ou abstrair solicitações de objetos. O teste acima não 
+					foi implementado um método para desfazer a solicitação, mas pode-se 
+					fazer essa implementação junto com métodos para auditar os processos
+					feitos logando em arquivos.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
