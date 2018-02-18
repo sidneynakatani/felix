@@ -31,7 +31,7 @@
 </head>
 
 <!--  Thumb -->
-<img src="../../img/works/20180211/vscode.jpg" alt=""
+<img src="../../img/works/20180217/Spring.png" alt=""
 	style="display: none;" />
 
 
@@ -56,7 +56,7 @@
 	<div align="center">
 
 		<img class="img-responsive" alt="" 
-			src="../../img/works/20180211/vscode.jpg"/>
+			src="../../img/works/20180217/Spring.png"/>
 
 	</div>
 
@@ -72,78 +72,94 @@
 			<div class="row"
 				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
 
-				<h2 align="center">Java + Visual Studio Code.</h2>
+				<h2 align="center">Spring + Visual Studio Code.</h2>
 
 				<p align="left" class="lead">
-					Não é de hoje que a <strong>Microsoft</strong> vem inovando em novas
-					tecnologias e soluções.</br>
-					Computação nas nuvens, IDE's, dispositivos, entre outras coisas.
+					Parece não ter limites para o Visual Studio Code. Apenas instalando 
+					o pack Java que contempla extensão Java e bibliotecas para utilização
+					do Maven e Spring já podemos subir uma aplicação Web em Spring Boot.
 				</p>
 				
 				<p align="left" class="lead">
-					A 1 ano venho usado a IDE da Microsoft <strong>Visual Studio Code</strong> ou simplesmente
-					<strong>VS Code</strong> para programar em Angular.
+					Cada vez mais fácil de criar, configurar e subir uma aplicação Web,  
+					ferramentas como <strong>GIT</strong> integradas ao <strong>VS Code</strong>	
+				    e scaffolds Spring como <strong>Spring Initializr</strong> só vem para
+				    agregar e ficar.				
 				</p>
 				
 				<p align="left" class="lead">
-					Por ser uma IDE praticamente recente, as atualizações são frequentes. 
+					Nesse Post vou mostrar como é fácil subir uma aplicação em Spring boot
+					utilizando VS Code e Spring Initializr. </br>
+					Se as extensões Java, Maven e Spring já estiverem instaladas, podemos
+					subir uma aplicação em 3 minutos.
 				</p>
 				
-			
 				<br />
 
 				<h3 align="left">Baixando VS Code e extensão Java.</h3>
+				
+				<p align="left" class="lead">
+					Se já tem o Visual Studio Code com as extensões Java instaladas, pule
+					esse tópico.
+				</p>
 
 				<p align="left" class="lead"> 
 					Segue o 
-					<a href="https://code.visualstudio.com/download" target="_Blank">link</a> 
-					para baixar o Visual Studio Code para sua plataforma(Linux, Windows ou Mac).
+					<a href="http://nakatech.herokuapp.com/article/vscode.html" target="_Blank">Post</a> 
+					anterior para fazer a instalação e configuração do Visual Studio Code.
 				</p>
 				
+				
+				<br/>
+				
+				
+				<h3 align="left">Gerando estrutura incicial com Spring Initializr</h3>
+				
 				<p align="left" class="lead">
-					Instalando as extensões Java: </br></br>
-					
-					- No seu VS Code pressione <strong><i>CTRL + Shift + X</i></strong> para abrir a
-					visualização de extensões. </br>
-					- Digite <i>vscode-java-pack</i> e baixe a extensão <strong>Java Extension Pack</strong>.
+					O <strong>Spring Initializr</strong> é uma espécie de scaffold online. 
+					Com ele é possível gerar a estrutura inicial de um projeto 
+					<strong>Spring Boot</strong>.
+				</p>
+				
+				 <p align="left" class="lead"> 
+					Crie seu projeto inicial no  
+					<a href="http://start.spring.io/" target="_Blank">Spring Initializr</a>, 
+					baixe e descompacte na sua workspace.
 				</p>
 				
 				<div align="left">
-					<img class="img-responsive" alt="" src="../../img/works/20180211/ext.jpeg" />
+					<img class="img-responsive" alt="" src="../../img/works/20180217/springScaffold.jpeg" />
 			    </div>
 			    
-			    </br>
+			    <br/><br/>
 			    
 			    <p align="left" class="lead">
-			    	Pode ser que leve alguns minutos para instalar, e o status fica como "Installing" 
-			    	sem barra de progresso o que atrapalha na previsão de instalação. Quando finalizar 
-			    	a instalação, reinicie a IDE.
+			    
+			         1 - Selecione o tipo de Automatizador(Maven); <br/>
+			         2 - Selecione a tecnologia(Java); <br/>
+			         3 - Selecione a versão do Spring Boot(1.5.9); <br/>
+			         4 - Digite o grupo(Pacote principal); <br/>
+			         5 - Digite o nome do artefato; <br/>
+			         6 - Selecione as dependências(Opcional). 
 			    </p>
+			    
+			    <br/>
 				
-				<br/><br/>
-				
-				
-				<h3 align="left">Executando um "Hello World" Java.</h3>
-				
-				<p align="left" class="lead">
-					Vamos criar e executar uma pequena classe Java para exibir uma mensagem na tela.
-				</p>
-				
-				<p align="left" class="lead">
-					Como é somente para demonstrar o funcionamento da classe Java, não vamos criar 
-					um projeto, podemos criar diretamente no workspace.
-				</p>
-				
-				<p align="left" class="lead">
-					Criamos uma classe main chamado "Teste.java":
-				</p>
-				
-				<div align="left">
-					<img class="img-responsive" alt="" src="../../img/works/20180211/main.jpeg" />
+				<h3 align="left">Executando o Projeto</h3>
+			    
+			    <p align="left" class="lead">
+			    	Selecione o Projeto que foi descompactado, File -> Open Folder e selecione
+			    	a pasta principal.
+			    </p>
+			    
+			    <div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180217/tree.jpeg" />
+					<p align="center">Estrutura do projeto.</p>
 			    </div>
 			    
-			    </br></br></br>
-				
+			    </br></br>
+			
+			    
 				<p align="left" class="lead">
 					Para compilar e executar uma classe Java no VS Code, precisamos criar um arquivo 
 					Json <strong>launch.json</strong> que vai ter toda configuração para executar 
@@ -151,11 +167,6 @@
 					e adicione uma nova configuração:
 				</p>
 				
-				<div align="left">
-					<img class="img-responsive" alt="" src="../../img/works/20180211/conf1.jpeg" />
-			    </div>
-			    
-			    </br></br></br>
 				
 				<p align="left" class="lead">
 					Selecionamos Java:
@@ -165,19 +176,47 @@
 					<img class="img-responsive" alt="" src="../../img/works/20180211/conf2.jpeg" />
 			    </div>
 			    
-			    
 			    </br></br></br>
-				
-				<p align="left" class="lead">
-					Alteramos o valor da propriedade <i>mainClass</i> apontando para a classe "Main",
-					nesse caso "Teste":
+			    
+			    <p align="left" class="lead">
+					Alteramos o valor da propriedade <i>mainClass</i> apontando para a classe "Main":
 				</p>
 				
+				
+				<div align="center">
+					<img align="middle" class="img-responsive" alt="" src="../../img/works/20180217/laucher.jpeg" />
+					<p align="center">Aponte a classe main no campo <strong>mainClass</strong>.</p>
+			    </div>
+			    
+				</br></br></br>
+			    
+			    <p align="left" class="lead">
+					Adicionamos no <strong>Pom.xml</strong> a dependência "spring-boot-starter-web":
+				</p>
+				
+				
 				<div align="left">
-					<img class="img-responsive" alt="" src="../../img/works/20180211/conf3.jpeg" />
+					<img align="middle" class="img-responsive" alt="" src="../../img/works/20180217/pom.jpeg" />
 			    </div>
 				
 				
+				</br></br></br>
+			    
+			    <p align="left" class="lead">
+					Adicionamos o pacote <strong>controller</strong> e a classe <strong>Demo.java</strong> 
+					para ser nosso endpoint utilizando verbo <strong>GET</strong>:
+				</p>
+				
+				
+				<div align="left">
+					<img align="middle" class="img-responsive" alt="" src="../../img/works/20180217/controller.jpeg" />
+			    </div>
+			    
+			    <br/><br/>
+			    
+			    <div align="left">
+			    	<script src="https://gist.github.com/sidneynakatani/cb2d937a7b663976ea67e04ef4e762e3.js"></script>
+				</div>
 				
 				
 				<br/><br/>
@@ -189,12 +228,18 @@
 				</p>
 				
 				<p align="left" class="lead">
-					Pressione <strong>F5</strong> para executar a classe:
+					Execute o comando: <code>./mvnw spring-boot:run</code>
 				</p>
 				
+				<div align="left">
+					<img align="middle" class="img-responsive" alt="" src="../../img/works/20180217/run.jpeg" />
+			    </div>
+			    
+			    <br/><br/>
+			
 				
 				<div align="left">
-					<img class="img-responsive" alt="" src="../../img/works/20180211/test.jpeg" />
+					<img class="img-responsive" alt="" src="../../img/works/20180217/test.jpeg" />
 			    </div>
 			    
 			    <br/>
@@ -205,11 +250,9 @@
 				<h3>Conclusão.</h3>
 				
 				<p align="left" class="lead">
-					Mais uma alternativa de IDE grátis para programar Java. Apesar de ainda utilizar muito o 
-					Eclipse, estou aos poucos migrando para o Visual Studio Code. </br>
-					O VS Code é bem leve e vem melhorando cada dia e acredito que tem um grande futuro como
-					multi plataforma.
-					
+					O Visual Studio Code vem amadurecendo muito, possibilitando executar diversas 
+					linguagens de programação. Muitas ferramentas integradas a IDE faz com que
+					fique cada vez mais produtivo utilizá-la.
 				</p>
 
 			</div>
