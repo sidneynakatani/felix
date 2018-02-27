@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180227/thymeleaf.png" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180227/thymeleaf.png"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Spring + Thymeleaf.</h2>
+
+				<p align="left" class="lead">
+					Não consegui escrever nada nesse último final de semana devido ao grande 
+					número de horas trabalhadas no serviço, além de horas extras e finais de 
+					semana trabalhando em uma implantação.
+				</p>
+				
+				<p align="left" class="lead">
+					Enfim, vou escrever um pequeno tutorial para utilizar um gerador de template 
+					chamado <strong>Thymeleaf</strong> junto ao <strong>Spring Boot</strong>. 		
+				</p>
+				
+				<p align="left" class="lead">
+					Vai ser um pequeno "Hello world" pois estou sem muito tempo, mas vou 
+					demonstrar como é rápido fazer a configuração no Eclipse. Esse tutorial 
+					vai ser mais para configurar o ambiente e subir a primeira tela, em um 
+					próximo Post faremos algo mais completo.
+				</p>
+				
+				<p align="left" class="lead">
+					O <strong>Thymeleaf</strong> além de ser um gerador de templates, ele 
+					pode deixar nossas páginas Html dinâmicas. O <i>JSP</i>	também possibilita
+					deixar o Html dinâmico, mas o Thymeleaf é uma tecnologia mais nova e não 
+					precisa de um servidor de aplicação para exibir a tela caso queira fazer 
+					uma visualização.	
+				</p>
+				
+				<br />
+
+				<h3 align="left">Criando um projeto Maven.</h3>
+				
+				<p align="left" class="lead">
+					Para criar um projeto Maven no Eclipse: File > New > Maven Projet
+				</p>
+				
+				 <div align="center" style="margin-top: 70px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180227/1.jpeg" />
+					<p align="center">Marque o workspace padrão.</p>
+			    </div>
+			    
+			    <div align="center" style="margin-top: 70px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180227/2.jpeg" />
+					<p align="center">Selecione um Archetype</p>
+			    </div>
+			    
+			     <div align="center" style="margin-top: 70px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180227/3.jpeg" />
+					<p align="center">Digite uma identificação para seu grupo e artifact.</p>
+			    </div>
+				
+				
+				<br/>
+				
+				
+				<h3 align="left">Configurando seu projeto Maven</h3>
+				
+				<p align="left" class="lead">
+					A primeira coisa a configurar no projeto são as dependências no <i>pom.xml</i>
+					e atualizar o diretório Maven com suas bibliotecas.
+				</p>
+				
+				<p align="left" class="lead">
+					Abaixo a configuração inicial do <strong>Pom.xml</strong> com o Spring Boot e 
+					o Thymeleaf:
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/2744a408f151440607d538b7434606e3.js"></script>
+				</div>
+				
+				<p align="left" class="lead" style="margin-top: 30px;">
+					Após configurar seu <strong>Pom.xml</strong>, clique com botão direito do mouse no seu 
+					projeto e atualize seu projeto Maven: Maven > Update Project.
+				</p>
+				
+				<div align="center" style="margin-top: 30px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180227/dependecies.jpeg" />
+					<p align="center">bibliotecas baixadas no diretório Maven.</p>
+			    </div>
+			    
+			    <br/><br/>
+			    
+			    <h3 align="left">Criando um html com Thymeleaf</h3>
+			    
+			    <p align="left" class="lead">
+					Crie um <strong>Source Folder</strong> no seu projeto com a estrutura: 
+					<i>src/main/resources/templates/</i>
+				</p>
+				
+				<p align="left" class="lead">
+					Crie um arquivo <strong>home.html</strong> dentro da Source Folder criado com o conteúdo abaixo:
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/7272129a5c22315bbfe76833af414d02.js"></script>
+				</div>
+			    
+			    <br/>
+				
+				<h3 align="left">Criando a classe Controller.</h3>
+			    
+			    <p align="left" class="lead">
+			    	Crie uma classe Controller, <strong>HelloController.java</strong> que vai ser responsável
+			    	por direcionar a página.
+			    </p>
+			    
+			    <div>
+					<script src="https://gist.github.com/sidneynakatani/4e80220634a9fe1a82651194f0aa3606.js"></script>
+			    </div>
+			    
+			    <h3 align="left" style="margin-top: 50px;">Classe principal.</h3>
+			
+			    
+				<p align="left" class="lead">
+					Altere a classe <strong>App.java</strong> para que possamos inicializar nossa aplicação via 
+					Spring boot:
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/542d5f65c38288f98184d0d957396b72.js"></script>
+			    </div>
+				
+				
+				<p align="left" class="lead" style="margin-top: 50px;">
+					A estrutura do projeto deve ficar assim:
+				</p>
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20180227/structure.jpeg" />
+			    </div>
+			  
+			  
+				
+				<h3 align="left" style="margin-top: 50px;">Executando a aplicação.</h3>
+				
+				<p align="left" class="lead">
+					Pressione o botão direito do mouse na classe <i>App.java</i> e selecione 
+					Run As > Java Application.
+				</p>
+			
+			    <p align="left" class="lead">
+					Digite no seu Browser: http://localhost:8080/hello?name=Sidney
+				</p>
+			
+			
+				<div align="left">
+					<img align="middle" class="img-responsive" alt="" src="../../img/works/20180227/test.jpeg" />
+			    </div>
+			    
+			   
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					Com menos de 5 minutos criamos um projeto Web sem muita dificuldade de configuração.
+					Frameworks cada vez mais produtivos pois não há necessidade de configurações de
+					XML como antigamente.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
