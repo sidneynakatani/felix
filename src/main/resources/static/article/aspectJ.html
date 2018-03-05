@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180303/aspect.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180303/aspect.jpg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">AspectJ - Programação orientado a Aspecto(AOP).</h2>
+
+				<p align="left" class="lead">
+					A <strong>Programação Orientada a Aspecto</strong> ou <strong>AOP</strong> vem 
+					para diminuir o acoplamento entre funcionalidades. 
+				</p>
+				
+				<p align="left" class="lead">
+					Na <strong>Programação Orientada a Objetos</strong> quando estamos desenvolvendo
+					um sistema, sempre vai existir um módulo principal que cuida da regra de negócio 
+					e vários outros módulos secundários como módulo de log, autenticação, entre outros.</br>
+					Existe um problema que no módulo principal vamos ter que injetar os módulos 
+					secundários também chamadas de <strong>crosscutting concerns</strong> e isso
+					vai ser usado em todos os outros módulos com regra de negócio.
+				</p>
+				
+				<div align="center" style="margin-top: 30px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180303/example.jpeg" />
+					<p align="center">Módulo Principal implementando módulos secundários.</p>
+			    </div>
+			    
+			    <p align="left" class="lead" style="margin-top: 20px;">
+					Somente pensando no módulo secundário de Log, sabemos que para efeito de auditoria
+					ela deve ser implementada em todos os outros módulos. Quando isso acontece, pode 
+					haver falhas como esquecer de implementar em algumas classes.
+				</p>
+				
+				<p align="left" class="lead">
+					A <strong>Programação Orientada a Aspecto</strong> ajuda a centralizar os módulos
+					secundários além de mais algumas vantagens como vou demonstrar na prática 
+					utilizando <strong>AspectJ</strong>.
+				</p>
+				
+				<p align="left" class="lead">
+					Através de um processo chamado <strong>Weaving</strong> podemos orquestrar os
+					módulos secundários chamando quantas vezes quiser no módulo principal sem precisar
+					fazer a composição ou injeção desse módulo secundário.
+				</p>
+				
+				
+				
+				<div align="center" style="margin-top: 30px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180303/graph.jpg" />
+					<p align="center">Módulos secundários sendo orquestrados via Weaving.</p>
+			    </div>
+				
+				
+				<br />
+
+				<h3 align="center" style="margin-top: 50px;">Criando um projeto Maven.</h3>
+				
+				<p align="left" class="lead" style="margin-top: 50px;">
+					Para criar um projeto Maven no Eclipse: File > New > Maven Projet
+				</p>
+				
+				 <div align="center" style="margin-top: 30px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180227/1.jpeg" />
+					<p align="center">Marque o workspace padrão.</p>
+			    </div>
+			    
+			    <div align="center" style="margin-top: 70px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180227/2.jpeg" />
+					<p align="center">Selecione um Archetype</p>
+			    </div>
+			    
+			     <div align="center" style="margin-top: 70px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180303/maven.jpeg" />
+					<p align="center">Digite uma identificação para seu grupo e artifact.</p>
+			    </div>
+				
+				
+				
+				<h3 align="center" style="margin-top: 100px;">Configurando seu projeto Maven</h3>
+				
+				<p align="left" class="lead" style="margin-top: 50px;">
+					A primeira coisa a configurar no projeto são as dependências no <i>pom.xml</i>
+					e atualizar o diretório Maven com as bibliotecas do AspectJ.
+				</p>
+				<p align="left" class="lead">
+					Para habilitar o AspectJ precisamos importar as lib: <strong> <i>aspectjrt.jar, 
+					aspectjweaver.jar e spring-aop.jar. </i></strong>
+				</p>
+				
+				
+				<p align="left" class="lead">
+					Abaixo a configuração inicial do <strong>Pom.xml</strong> para utilizar AOP:
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/55e18cc7819a5f65eb90ddab14393d52.js"></script>
+				</div>
+				
+				<p align="left" class="lead" style="margin-top: 30px;">
+					Após configurar seu <strong>Pom.xml</strong>, clique com botão direito do mouse no seu 
+					projeto e atualize seu projeto Maven: Maven > Update Project.
+				</p>
+				
+				<div align="center" style="margin-top: 30px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180303/structure.jpeg" />
+					<p align="center">bibliotecas baixadas no diretório Maven.</p>
+			    </div>
+			    
+			  
+			    <h3 align="center" style="margin-top: 100px;">Iniciando Projeto com AspectJ</h3>
+			    
+				
+			    <p align="left" class="lead" style="margin-top: 50px;">
+					A estrutura do nosso projeto deve ficar como figura abaixo:
+				</p>
+				
+				<div align="center" style="margin-top: 30px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180303/project.jpeg" />
+					<p align="center">Estrutura de pastas do projeto.</p>
+			    </div>
+			    
+			     <p align="left" class="lead" style="margin-top: 30px;">
+					Crie um <strong>Source Folder</strong> no seu projeto com a estrutura: 
+					<i>src/main/resources</i> </br>
+					Crie um arquivo <strong>Spring-Customer.xml</strong> dentro da Source Folder 
+					<strong>src/main/resources</strong> com o conteúdo abaixo:
+				</p>
+			  
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/3a5c7342e0efef289fe2050c8e2c5257.js"></script>
+				</div>
+			    
+			  
+				
+				<h3 align="center" style="margin-top: 100px;">Criando a classe de Business Object.</h3>
+			    
+			    <p align="left" class="lead" style="margin-top: 50px;">
+			    	Crie uma interface <strong>ProductBo.java</strong> com as suas funcionalidades.
+			    </p>
+			    
+			    <div>
+					<script src="https://gist.github.com/sidneynakatani/bdfcab4cd748b2a252a6b49c3739dfc0.js"></script>
+			    </div>
+			    
+			     <p align="left" class="lead" style="margin-top: 50px;">
+			    	Crie uma classe implementadora <strong>ProductBoImpl.java</strong> implementando as
+			    	funcionalidades.
+			    </p>
+			    
+			    <div>
+					<script src="https://gist.github.com/sidneynakatani/1f3f37bfe0da3c57f8f17192fb02a919.js"></script>
+			    </div>
+			    
+			    <h3 align="center" style="margin-top: 100px;">Criando a classe de Logger.</h3>
+			
+			    
+				<p align="left" class="lead" style="margin-top: 50px;">
+					Crie a classe <strong>AspectLogger.java</strong> que vai ser nosso módulo secundário.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/1553c1a299d2779f2d8bd00aa6400cfb.js"></script>
+			    </div>
+				
+				<p align="left" class="lead">
+					Perceba que os métodos estão comentados, descomente o método com o aspecto que deseja
+					testar e execute a aplicação.
+				</p>
+				
+				<p align="left" class="lead">
+				    Algumas anotações de Aspectos que vamos utilizar: </br></br>
+				
+					- <strong>@Before</strong>: Roda antes do módulo principal;</br>
+					- <strong>@After</strong>:  Roda depois do módulo principal;</br>
+					- <strong>@AfterReturning</strong>: Roda depois do retorno do método do módulo principal;</br>
+					- <strong>@AfterThrowing</strong>: Roda depois que o método lança Exceção do módulo principal;</br>
+					- <strong>@Around</strong>: Roda antes do módulo principal, mas volta ao módulo secundário.</br>
+				</p>
+				
+				
+				<p align="left" class="lead">
+				    Dentro da anotação existe o parâmetro <strong>execution</strong> que 
+				    determina qual módulo vamos interceptar e em qual momento:
+				</p>
+				
+				<div align="center" style="margin-top: 30px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180303/execution.jpeg" />
+					
+			    </div>
+			    
+			    
+			     <h3 align="center" style="margin-top: 100px;">Criando a classe Main.</h3>
+			
+			    
+				<p align="left" class="lead" style="margin-top: 50px;">
+					Crie a classe <strong>App.java</strong> que vai iniciar o projeto.
+				</p>
+				
+				 <div>
+					<script src="https://gist.github.com/sidneynakatani/fcb4de319f11d25c423131018f50a592.js"></script>
+			    </div>
+			    
+				
+				
+				<h3 align="left" style="margin-top: 50px;">Executando a aplicação.</h3>
+				
+				<p align="left" class="lead" style="margin-top: 50px;">
+					Executando o aspect @Before:
+				</p>
+				
+				<p align="left" class="lead">
+					Na classe <strong>AspectLogger.java</strong> descomente o método com aspect @Before:
+				</p>
+				
+			
+			    <p align="left" class="lead">
+					Na classe <strong>App.java</strong>: 	
+				</p>
+				
+				<div class="row">
+				
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							ProductBo product = (ProductBo) appContext.getBean("productBo");</br>
+	    					product.addProduct();
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				<p align="left" class="lead">
+					Resultado:
+				</p>
+			
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							logBefore() is running!</br>
+							hijacked : addProduct</br>
+							******</br>
+							addProduct working...
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				
+			
+			    <p align="left" class="lead" style="margin-top: 100px;">
+					Executando o aspect @After:
+				</p>
+				
+				<p align="left" class="lead" >
+					Na classe <strong>AspectLogger.java</strong> descomente o método com aspect @After:
+				</p>
+				
+			
+			    <p align="left" class="lead">
+					Na classe <strong>App.java</strong>: 	
+				</p>
+				
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							ProductBo product = (ProductBo) appContext.getBean("productBo");</br>
+	    					product.addProduct();
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				<p align="left" class="lead">
+					Resultado:
+				</p>
+			
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							addProduct working...</br>
+							[]</br>
+							logAfter() is running!</br>
+							hijacked : addProduct</br>
+							******</br>
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				
+				
+				
+				<p align="left" class="lead" style="margin-top: 100px;">
+					Executando o aspect @AfterReturning:
+				</p>
+				
+				<p align="left" class="lead" >
+					Na classe <strong>AspectLogger.java</strong> descomente o método com aspect AfterReturning:
+				</p>
+				
+			
+			    <p align="left" class="lead">
+					Na classe <strong>App.java</strong>: 	
+				</p>
+				
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							ProductBo product = (ProductBo) appContext.getBean("productBo");</br>
+	    					product.addProductReturnValue();
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				<p align="left" class="lead">
+					Resultado:
+				</p>
+			
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							addProduct working...</br>
+							logAfterReturning() is running!</br>
+							hijacked : addProductReturnValue</br>
+							Method returned value is : Product added.</br>
+							******
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				
+				
+				
+				<p align="left" class="lead" style="margin-top: 100px;">
+					Executando o aspect @AfterThrowing:
+				</p>
+				
+				<p align="left" class="lead" >
+					Na classe <strong>AspectLogger.java</strong> descomente o método com aspect AfterThrowing:
+				</p>
+				
+			
+			    <p align="left" class="lead">
+					Na classe <strong>App.java</strong>: 	
+				</p>
+				
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							ProductBo product = (ProductBo) appContext.getBean("productBo");</br>
+	    					product.addProductThrowException();
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				<p align="left" class="lead">
+					Resultado:
+				</p>
+			
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							addProductThrowException() working...</br>
+							logAfterThrowing() is running!</br>
+							hijacked : addProductThrowException</br>
+							Exception : java.lang.Exception: addProductThrowException Generic Error.</br>
+							******
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				
+				
+				
+				<p align="left" class="lead" style="margin-top: 100px;">
+					Executando o aspect @Around:
+				</p>
+				
+				<p align="left" class="lead" >
+					Na classe <strong>AspectLogger.java</strong> descomente o método com aspect Around:
+				</p>
+				
+			
+			    <p align="left" class="lead">
+					Na classe <strong>App.java</strong>: 	
+				</p>
+				
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							ProductBo product = (ProductBo) appContext.getBean("productBo");</br>
+	    					product.addProductAround("Teste");
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				<p align="left" class="lead">
+					Resultado:
+				</p>
+			
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <p align="left" class="lead">
+						<code>
+							hijacked method : addProductAround</br>
+							hijacked arguments : [Teste]</br>
+							Around before is running!</br>
+							addProductAround() working, args : Teste</br>
+							Around after is running!</br>
+							******
+						</code>
+					</p>
+				  </div>
+				</div>
+				
+				</div>
+			
+			
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					Nesse simples exemplo, podemos mostrar como pode ser eficiente a Programação
+					Orientada a Aspecto na questão de baixo acoplamento, o módulo principal não
+					precisa injetar os módulos secundários, os módulos secundário decidem onde 
+					vão ser injetados e em qual momento.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
