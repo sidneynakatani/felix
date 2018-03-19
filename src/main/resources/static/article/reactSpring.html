@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180318/spring.png" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180318/spring.png"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Crie uma aplicação Back-End e Front-End Rest em 10 minutos.</h2>
+
+				<p align="left" class="lead" style="margin-top: 50px">
+					No último Post falamos um pouco sobre React e como é simples criar uma aplicação 
+					Front-end sem integração. 
+				</p>
+				
+				<p align="left" class="lead">
+					Nesse Post vamos fazer algo mais elaborado, criando uma aplicação Front-end React 
+					consumindo de um Back-end um serviço Rest feito em Spring Boot.
+				</p>
+				
+				<p align="left" class="lead">
+					Também vamos falar um pouco sobre <strong>CORS</strong>(Cross-Origin Resource Sharing).	
+				</p>
+				
+				<p align="left" class="lead">
+					A ideia é mostrar como é rápido criar uma aplicação com duas camadas com as 
+					ferramentas certas. 
+				</p>
+				
+				<p align="left" class="lead">
+					Não vamos discutir aqui se React é melhor que o Angular para desenvolvimento da camada 
+					de Front-end nessa aplicação.
+				</p>
+				
+				<h3 align="left" style="margin-top: 50px">Criando uma API Rest com Spring Boot.</h3>
+				
+				<p align="left" class="lead"> 
+					Vamos adiantar nosso projeto criando a estrutura pelo 
+					<a href="https://start.spring.io/" target="_Blank">
+						<strong>Spring Initializr</strong>.
+					</a> 
+				</p>
+				
+				<p align="left" class="lead"> 
+					Vamos precisar das seguintes dependências:
+				</p>
+				
+				<div align="left">
+					<ul >
+						<li><strong>H2: </strong>Banco de Dados em memória;</li>
+						<li><strong>JPA: </strong>ORM padrão Java;</li>
+						<li><strong>Rest Repositories: </strong> Dependências Rest;</li>
+						<li><strong>Web: </strong>Spring MVC com Jackson e Hibernate Validator.</li>
+					</ul>
+				</div>
+				
+				<p align="left" class="lead"> 
+					Em <strong>Search for dependencies</strong> digite um a um as dependências acima.
+				</p>
+				
+				<p align="left" class="lead"> 
+					Depois gere o projeto e baixe na sua maquina clicando em <strong>Generate project</strong>.
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<img class="img-responsive" alt="" src="../../img/works/20180318/init.jpeg" />
+			    </div>
+				
+				<p align="left" class="lead" style="margin-top: 50px"> 
+					Descompacte o projeto em seu workspace e importe o projeto como <i>Maven</i>.
+				</p>
+				
+				<div align="center" style="margin-top: 30px">
+					<img class="img-responsive" alt="" src="../../img/works/20180318/1.jpeg" />
+			    </div>
+			    
+			    <div align="center" style="margin-top: 50px">
+					<img class="img-responsive" alt="" src="../../img/works/20180318/2.jpeg" />
+			    </div>
+			    
+			    <p align="left" class="lead" style="margin-top: 100px"> 
+			    	Abaixo, a estrutura do projeto:
+			    </p>
+			    
+			    <div align="center" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20180318/structure.jpeg" />
+			    </div>
+			    
+			    
+			    
+			    <p align="left" class="lead" style="margin-top: 100px"> 
+					Primeiro vamos criar a entidade <strong><i>Product.java</i></strong>:
+				</p>
+				
+			    <div>
+			    	<script src="https://gist.github.com/sidneynakatani/e74a82fd0efd88ed48b298e4259a9a3f.js"></script>
+				</div>
+				
+				
+				<p align="left" class="lead" style="margin-top: 50px"> 
+					Vamos criar um repository para a entidade Produto <strong><i>ProductRepositoryt.java</i></strong>, 
+					classe que controla a camada de persistência:
+				</p>
+				
+			    <div>
+			    	<script src="https://gist.github.com/sidneynakatani/8ee16aabfec0c1f385823b0214894861.js"></script>
+				</div>
+				
+				<p align="left" class="lead" style="margin-top: 50px"> 
+					Vamos criar uma interface <strong><i>ProductService.java</i></strong>:
+				</p>
+				
+			    <div>
+			    	<script src="https://gist.github.com/sidneynakatani/cbc66b026da9a38f94459c0e4d60e6ef.js"></script>
+				</div>
+				
+				<p align="left" class="lead" style="margin-top: 50px"> 
+					Vamos criar uma classe implementadora <strong><i>ProductServiceImpl.java</i></strong>
+					que cuida da camada de negócio:
+				</p>
+				
+			    <div>
+			    	<script src="https://gist.github.com/sidneynakatani/ada4dd7d5ea3d11f123c1de23dc1b838.js"></script>
+				</div>
+				
+				<p align="left" class="lead" style="margin-top: 50px"> 
+					Vamos criar a classe <strong><i>ProductController.java</i></strong> que controla o 
+					endpoint:	
+				</p>
+				
+			    <div>
+			    	<script src="https://gist.github.com/sidneynakatani/70bc792b888dcf974c73d802e914fa17.js"></script>
+				</div>
+				
+				<h5 align="left" style="margin-top: 50px">CORS.</h5>
+				<blockquote style="background: white; 
+								   border-left: 10px solid #ccc;
+								   margin: 1.5em 10px;
+								   padding: 0.5em 10px;">
+  					<p align="left">
+  						Compartilhamento de recursos de origens cruzadas é um mecanismo que usa cabeçalhos HTTP adicionais 
+  						para garantir permissão de acesso a recursos de um servidor diferente do da origem da página (domínio) 
+  						correntemente em uso. Um user agent realiza um requisição HTTP de origem cruzada quando executa uma 
+  						requisição de um domínio, protocolo ou porta diferente do qual originou o documento corrente.
+  					</p>
+  					
+  					<p align="left">
+  						<i>Fonte: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS</i>
+  					</p>
+				</blockquote>
+
+
+				<h3 align="left" style="margin-top: 50px">Criando a camada front com React.</h3>
+
+				<p align="left" class="lead"> 
+					O pré requisito para utilizar o React é ter o Nodejs com a versão estável mais atual 
+					instalado. 
+				</p>
+				
+				<p align="left" class="lead"> 
+					<code>$ sudo apt-get update</code> </br>
+					<code>$ sudo apt-get install nodejs</code> </br>
+					<code>$ sudo apt-get install npm</code> </br>
+				</p>
+				
+				<p align="left" class="lead">
+					<strong>Iniciando seu projeto:</strong>		
+				</p>
+				
+				<p align="left" class="lead">
+					Se já tem o <strong>React</strong> instalado, pule a etapa abaixo: </br>
+					<code>$ npm install -g create-react-app</code>
+				</p>
+				
+				<p align="left" class="lead">
+					Criando um projeto "<i>react-client</i>": </br>
+					<code>$ create-react-app react-client</code>
+				</p>
+				
+				<p align="left" class="lead">
+					Entre no projeto "<i>react-client</i>": </br>
+					<code>$ cd react-client</code> </br>
+				</p>
+				
+				<p align="left" class="lead">
+					Altere o arquivo <strong>App.js</strong> na pasta "src/App.js" com o conteúdo abaixo: </br>
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/ca635724df81f2802a675fc9f1a1f2d2.js"></script>
+				</div>
+				
+				<br/>
+				
+				
+				
+				<h3 align="left">Executando aplicação.</h3>
+				
+				<p align="left" class="lead">
+					Rode primeiro a aplicação Spring Boot com o serviço Rest:
+				</p>
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20180318/test1.jpeg" />
+			    </div>
+				
+				<p align="left" class="lead" style="margin-top: 50px">
+					Agora inicie a aplicação React: </br>
+					<code>$ npm start</code>
+				</p>
+				
+				<p align="left" class="lead">
+					Por padrão a aplicação inicia na porta <strong>3000</strong>
+				</p>
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20180310/start.jpeg" />
+			    </div>
+				
+				<p align="left" class="lead" style="margin-top: 70px">
+					No browser digite: <i>http://localhost:3000</i>
+				</p>
+				
+				<div align="left">
+					<img class="img-responsive" style="margin-top: 30px;" alt="" src="../../img/works/20180318/test.jpeg" />
+			    </div>
+			    
+			  
+				
+				<h3 style="margin-top: 100px;" >Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					Em 10 minutos conseguimos criar um projeto com 2 camadas utilizando as ferramentas certas. Repare que é muito 
+					rápido e prático utilizando a combinação Spring e React.
+					
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
