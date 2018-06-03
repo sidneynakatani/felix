@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180603/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180603/index.jpg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Apache Kafka.</h2> 
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Apache Kafka é uma plataforma de streaming distribuída.  
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Hoje em dia as aplicações precisam ser cada vez mais rápidas, e para isso sempre precisamos de 
+					novas soluções como API’s para facilitar e distribuir as responsabilidades.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					O Kafka tem uma proposta de solução para aplicações que precisam de respostas mais rápidas 
+					e com contingência.
+				</p>
+				
+				<p align="left" style="margin-top: 20px; margin-bottom: 50px" class="lead">
+					Imagine aplicações que precisam gerar arquivos e enviar esse anexo via e-mail, um tempo muito 
+					alto para que a aplicação faça todo esse fluxo e gere uma resposta para o cliente. Com Kafka 
+					podemos dividir a aplicação em 2, diminuindo o esforço e tempo da aplicação.
+				</p>
+				
+				<div align="center" style="margin-bottom: 70px">
+					<img class="img-responsive" alt="" src="../../img/works/20180603/diagram.png" />
+			    </div>
+				
+				
+				<h5 align="left"> São 3 capacidades que a plataforma disponibiliza: </h5>
+				
+				<div align="left" style="margin-top: 20px; margin-bottom: 50px" class="lead">
+					<ol>
+						<li> 
+							 Capacidade de Publish e subscribe, similar a filas de mensagens;
+						</li>
+						
+						<li> 
+							Armazenar registros de Stream com fault-tolerant de forma durável;
+						</li>
+						
+						<li> 
+							Processar os registros de Stream enquanto eles ocorrem.
+						</li>
+						
+					
+					</ol>
+				</div>
+				
+				
+			  <h5 align="left"> As principais API’s: </h5>
+				
+				<div align="left" style="margin-top: 20px; margin-bottom: 50px" class="lead">
+					<ul>
+						<li> 
+							<strong>Producer API</strong>, permite a aplicação publicar registros de Stream para 1 ou mais 
+							tópicos no Kafka;
+						</li>
+						
+						<li> 
+							<strong>Consumer API</strong>, permite a aplicação consumir registros de Stream de 1 ou mais 
+							tópicos no Kafka;
+						</li>
+						
+						<li> 
+							<strong>Streams API</strong>, permite a aplicação publicar e consumir registros de Stream de 
+							1 ou mais tópicos no Kafka;
+						</li>
+						
+						<li> 
+							<strong>Connector API</strong>, permite que o Kafka observe alterações em aplicações ou banco 
+							de dados relacionais.
+						</li>
+					
+					</ul>
+				</div>
+				
+				<div align="center" style="margin-bottom: 70px">
+					<img class="img-responsive" alt="" src="../../img/works/20180603/kafkaApi.png" />
+			    </div>
+			    
+			     <h5 align="left"> Alguns casos de uso para o Kafka. </h5>
+				
+				<div align="left" style="margin-top: 20px; margin-bottom: 50px" class="lead">
+					<ul>
+						<li> 
+							<strong>Mensagens</strong>: O Kafka substitui outros Broker’s de mensagens com a vantagem de 
+							ter uma taxa de transferência mais rápida, além de contar com replicação e fault-tolerance;
+						</li>
+						
+						<li> 
+							<strong>Métricas</strong>: O Kafka pode ser utilizado para sistemas de métricas e monitoração 
+							de dados, agregado a um sistema ou aplicação, pode-se capturar dados em tempo de execução sem 
+							interromper o fluxo do sistema ou aplicação;
+						</li>
+						
+				
+						<li> 
+							<strong>Log</strong>: O Kafka pode ser utilizado para substituir ou agregar no sistema de log. 
+							Hoje os os log’s são um grande problema para as aplicações por consumir muito I/O, utilizando 
+							Kafka para controlar log’s podemos direcionar os log’s para outros pontos sem onerar a aplicação.
+						</li>
+					
+					</ul>
+				</div>
+				
+				<h3 style="margin-top: 70px;"> Tutorial. </h3>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Esse tutorial foi feito sobre a plataforma Unix, caso esteja utilizando uma plataforma Windows, troque <code>bin/</code> 
+					por <code>bin\windows\</code> e nos scripts adicione a extensão <code>.bat</code>. 
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 1</strong>: Baixe a ultima versão estável do  
+					<a href="https://www.apache.org/dyn/closer.cgi?path=/kafka/1.1.0/kafka_2.11-1.1.0.tgz" target="_Blank">
+						<strong>Kafka 1.1.0</strong>.
+					</a> 
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 2</strong>: Descompacte o arquivo e entre no diretório;
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 3</strong>: Inicie o Zookeeper, caso não tenha instalado, utilize o Zookeeper 
+					que vem embarcado no Kafka:</br>
+					<code>> bin/zookeeper-server-start.sh config/zookeeper.properties</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 4</strong>: Inicie o Kafka:</br>
+					<code>> bin/kafka-server-start.sh config/server.properties</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 5</strong>: Criar um tópico com 1 partição:</br>
+					<code>> bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 </br>
+					--topic test</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 6</strong>: Publicar uma mensagem:</br>
+					<code>> bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test</code></br>
+					<code>> Oi</code>
+				</p>
+				
+				<div align="left" style="margin-bottom: 50px">
+					<img class="img-responsive" alt="" src="../../img/works/20180603/producer.jpeg" />
+			    </div>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 7</strong>: Criar um Consumidor:</br>
+					<code>> bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test –from-beginning</code></br>
+					<code>> Oi</code>
+				</p>
+				
+				<div align="left" style="margin-bottom: 100px">
+					<img class="img-responsive" alt="" src="../../img/works/20180603/consumer.jpeg" />
+			    </div>
+			    
+			    
+			    <h5 align="left"> Utilizando Python para Consumir e publicar mensagens: </h5>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Podemos utilizar Java, Python, Angular, entre outras linguagens para conectar ao Kafka, nesse 
+					tutorial vamos utilizar o Python. 
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 1</strong>: Via PIP, baixar a lib Kafka para Python:</br>
+					<code>> pip install confluent-kafka</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 2</strong>: Criar o script para publicar mensagens no tópico “test”:</br>
+					<script src="https://gist.github.com/sidneynakatani/65bd7e5608ebb05903443395612bcfb2.js"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					<strong>Passo 3</strong>: Criar script para consumir as mensagens do tópico “test”:</br>
+					<script src="https://gist.github.com/sidneynakatani/34119b0a1dda9ff69e87e9332dea0b94.js"></script>
+				</p>
+				
+				
+				<h5 align="left" style="margin-bottom: 30px; margin-top: 70px">Consumindo mensagens do tópico 1</h5>
+				<div align="left" style="margin-bottom: 50px;">
+					<img class="img-responsive" alt="" src="../../img/works/20180603/python.jpeg" />
+			    </div>
+			    
+			    
+			   
+				<h3 style="margin-top: 100px;" >Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					O Apache Kafka vem para agregar aplicações trazendo soluções para algumas aplicações que precisam 
+					de performance e velocidade nas respostas para seus clientes. Podemos utilizar Kafka para  várias 
+					soluções, desde a mais simples como transmissões de mensagens até as mais complexas como interligar 
+					várias aplicações em cluster.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
