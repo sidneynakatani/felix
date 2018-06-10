@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180610/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180610/index.jpeg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">RxJava.</h2> 
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Nesse artigo vamos falar sobre a API RxJava, muito similar com a API Stream do Java 8 
+					mas um pouco mais flexível e fluente.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<strong>Conceito da programação funcional e reativa</strong> é escrever códigos compondo funções puras 
+					evitando compartilhar estados, mutabilidade de dados e alterações externas, isso na parte <strong>funcional</strong>. 
+					Já na parte <strong>reativa</strong> a programação é assíncrona e sempre se atentando a alteração de estado.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Trabalhando juntos, existe uma abordagem de programação elegante baseado em eventos.
+				</p>
+				
+				
+				
+				<h3 style="margin-top: 50px;margin-bottom: 50px"> Observables </h3>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Existem duas peças principais para entender como funciona o RXJava, <strong>Observables</strong> 
+					e <strong>Observers</strong>.
+				</p>
+				
+				<div align="left" style="margin-top: 20px; margin-bottom: 50px" class="lead">
+					<ul>
+						<li> 
+							<strong>Observables</strong> são objetos que recebem os dados e notificam outros 
+							objetos registrados que desejam receber os dados;
+
+						</li>
+						
+						<li> 
+							<strong>Observers</strong>  são objetos que desejam saber quando houve alteração em 
+							outro objeto que foi previamente registrado.
+						</li>
+					
+					</ul>
+				</div>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Um detalhe importante é que o objeto Observable pode ser <i>Non-Blocking</i> ou seja, uma execução assíncrono 
+					ou <i>Blocking</i> uma execução síncrona.
+				</p>
+				
+				
+				
+			  <h3 style="margin-top: 50px;margin-bottom: 50px"> Na prática </h3>
+				
+				
+			  <p align="left" style="margin-top: 20px" class="lead">
+				  Primeiro precisamos configurar o POM.xml adicionando as dependências do RXJava(Utilizei a versão 1.0.2):
+			  </p>
+			  
+			  <div align="left" style="margin-bottom: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20180610/pom.jpeg" />
+			  </div>
+			  
+			  <p align="left" style="margin-top: 50px" class="lead">
+				  Vamos criar alguns casos para utilizar a biblioteca RXJava:
+			  </p>
+			  
+			  
+			  <div align="left" style="margin-top: 20px; margin-bottom: 50px" class="lead">
+					<ul>
+						<li> 
+							Exibir uma mensagem no console;
+						</li>
+						
+						<li> 
+							Exibir várias mensagens no console;
+						</li>
+						
+				
+						<li> 
+							Exibir mensagens a partir de uma lista;
+						</li>
+						
+						
+						<li>
+							Exibir mensagens ordenadas em ordem alfabética a partir de uma lista;
+						</li>
+						
+						<li>
+							Exibir mensagens formatadas a partir de uma lista.
+						</li>
+					
+					</ul>
+			   </div>
+			   
+			  <p align="left" style="margin-top: 50px" class="lead">
+				  Repare que o método <strong>subscribe</strong> é utilizado para iniciar a chamada dos dados.
+			  </p>
+			  
+			  
+			  <p align="left" style="margin-top: 50px" class="lead">
+				   <script src="https://gist.github.com/sidneynakatani/fc8ad177beb804d22b1f71304ae33e88.js"></script>
+			  </p>
+			  
+			  <div align="left" style="margin-bottom: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20180610/test.jpeg" />
+			  </div>
+				
+			    
+			    
+			   
+				<h3 style="margin-top: 100px;" >Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					A programação funcional e reativa veio para tornar a programação mais robusta e ganhar mais performance. 
+					Esse tipo de programação não é para ser usado sem entender o conceito e fazer a implementação somente por 
+					ser uma tendência.</br>
+				    Estude bem os prós e contras dessa implementação para usá-la.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
