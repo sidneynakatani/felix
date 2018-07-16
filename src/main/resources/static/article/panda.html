@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180715/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180715/index.jpg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Análise de dados com Python+Pandas.</h2> 
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O Pandas é uma lib open source de alta performance para fazer análise de dados.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Bastante utilizado por comunidades acadêmicas, o Pandas vem ganhando mercado pelo 
+					seu uso simples e rapidez em analisar e organizar dados.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Combinado com ferramentas IPython e outras lib’s, o Pandas se torna uma ferramenta 
+					muito poderosa e performática para análise de dados para o Python.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para quem não quer utilizar ou aprender a linguagem R, a combinação Pandas e Python 
+					já satisfaz a maioria das capacidades do R.
+				</p>
+				
+	
+				
+				
+				<h3 style="margin-top: 70px;margin-bottom: 30px"> Instalando Pandas no Ubuntu. </h3>
+				
+				
+				<p align="left"  class="lead">
+					Para instalar o Pandas no Ubuntu vamos utilizar o comando “pip” para facilitar:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					
+					<code>
+						$ sudo pip install pandas
+					</code>
+				</p>
+				
+				
+				
+				<h3 style="margin-top: 70px;margin-bottom: 50px"> Baixando massa de dados. </h3>
+				
+				
+			    
+			    <p align="left" style="margin-top: 30px"  class="lead">
+					No site 
+					<a href="https://www.kaggle.com" target="_Blank">
+						kaggle 
+					</a>
+					 podemos baixar vários Datasets para os mais diversos tipos de pesquisa e análise.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para esse artigo estou utilizando os dados da Copa da Rússia de 2018.
+				</p>
+				
+				
+				<h3 style="margin-top: 70px;margin-bottom: 50px"> Analisando os dados com Python. </h3>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Depois que baixou o arquivo CSV no Kaggle, temos que entrar no terminal Python e importar 
+					o arquivo pelo Pandas.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					
+					<code>
+						>>> import pandas as pd </br>
+						>>> dataset = pd.read_csv('/tmp/WorldCupMatches.csv', sep=',');
+					</code>
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					A primeira linha importa a lib do Panda e segunda criamos um dataset e importamos os dados do 
+					nosso CSV utilizando “,” como separador.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Primeiro, vamos fazer um teste e verificar se os dados foram carregados corretamente com o método 
+					“head” para exibir as 5 primeiras linhas e o cabeçalho:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					
+					<code>
+						>>> dataset.head();
+					</code>
+				</p>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180715/head.jpeg" />
+			    </div>
+				
+				
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Para saber o número de linhas que o arquivo contém é só utilizar o método “count”:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					
+					<code>
+						>>> dataset.count();
+					</code>
+				</p>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180715/count.jpeg" />
+			    </div>
+				
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Para ter informações do arquivo, utilizamos o método “describe”:
+
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					
+					<code>
+						>>> dataset.describe();
+					</code>
+				</p>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180715/describe.jpeg" />
+			    </div>
+				
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Agora vamos ver alguns dados referente aos jogos do Brasil:
+
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					
+					<code>
+						>>> dataset.loc[dataset['Team'] == 'Brazil']
+
+					</code>
+				</p>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180715/Brasil.jpeg" />
+			    </div>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Vamos gerar um gráfico relacionando o número de gols vs tentativas feitas pelo Brasil:
+
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					
+					<code>
+						>>> import matplotlib.pyplot as plt </br>
+						>>> dataset.loc[dataset['Team'] == 'Brazil'].plot(x='Goal Scored',y='Attempts',kind='bar', </br>
+						title='Goals x Date',color='r')</br>
+						>>> plt.show()
+
+					</code>
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					A primeira linha importa a lib matplotlib, a segunda linha monta a query para pegar todos os 
+					resultados dos jogos do Brasil e relacionar gols marcados vs tentativas e a última linha gera o gráfico.
+
+				</p>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180715/graph.jpeg" />
+			    </div>
+				
+			   
+				<h3 style="margin-top: 100px;" >Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					O Pandas é uma ótima lib com várias ferramentas para fazer análise e organizar estruturas de dados. 
+					Além disso é bem eficiente e performático, fazendo com que seja uma ótima ferramenta para ser usada 
+					em produção. 
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
