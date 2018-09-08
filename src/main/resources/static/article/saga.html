@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180908/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180908/index.jpeg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Padrão Saga.</h2> 
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Saga são transações de longa duração que podem ter um grupo de transações que são intercambiáveis 
+					e independentes.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Além disso, as transações da Saga existem a ação compensatória ou o famoso “<strong>rollback</strong>”.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					O padrão Saga é muito utilizado em aplicações com Microsserviços ou distribuídas. 
+				</p>
+				
+				<h3 align="center" style="margin-top: 70px">
+					Microsserviços e Saga.
+				</h3> 
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Imagine um ecossistema de um microsserviços para um <strong>E-commerce</strong>.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Dentro desse ecossistema existem 3 Microsserviços: <strong>Pedido</strong>, 
+					<strong>Pagamento</strong> e <strong>Logística</strong>.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Sendo 3 serviços independentes que não se conhecem e com a camada de apresentação assíncrona, 
+					como fazer em caso de algum Microsserviço falhar ou não ter um resultado esperado?
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Por exemplo, eu usuário faço uma compra e a operadora de cartão não aprova minha compra. 
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Sistematicamente o caso acima seria chamar o microsserviço de <strong>pedido</strong>, mostrar 
+					para o usuário que está aguardando aprovação em seguida chamar o microsserviço de <strong>pagamento</strong>.
+				</p>
+				
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180908/fluxo.png" />
+			    </div>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Todo esse processo pode ser orquestrado pela camada de apresentação, mas vamos ter um problema, quem 
+					vai avisar o microsserviço de <strong>pedido</strong> que a compra foi cancelada pelo  Microsserviço 
+					de <strong>pagamento</strong>?
+				</p>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Podemos fazer esse processo de compensação dentro dos tratamentos de erro da camada de apresentação, 
+					mas não ficaria muito elegante.
+				</p>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Aqui entramos com o padrão <strong><i>Saga</i></strong> para resolver essa problemática.
+				</p>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Entre a camada de apresentação e os Microsserviços entra uma camada de <strong>Gateway</strong> para 
+					orquestrar as chamadas.
+				</p>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180908/fluxo2.png" />
+			    </div>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Agora podemos fazer todas as operações de forma transacional, caso alguma operação falhe, 
+					podemos desfazer e alterar o status do fluxo.
+				</p>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Observe abaixo 3 operações de compra, 1 com sucesso e 2 com falhas:
+				</p>
+				
+				<div align="center" style="margin-bottom: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20180908/fluxo3.png" />
+			    </div>
+			    
+			    <div align="center" style="margin-bottom: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20180908/fluxo5.png" />
+			    </div>
+			    
+			    <div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180908/fluxo6.png" />
+			    </div>
+				
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Repare que mesmo com o desacoplamento dos Microsserviços podemos transacionar as operações.
+				</p>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Claro que esse foi um exemplo mais simples, problemáticas mais complexas podem envolver outras 
+					tecnologias como utilização de <strong><i>Queues</i></strong>.
+				</p>
+				
+				
+				
+			   
+				<h3 style="margin-top: 70px;" >Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					O exemplo apresentado foi simplista, mas mostra como resolver algumas problemáticas de aplicações com 
+					Microsserviços ou distribuídas que necessitam de operações com transações.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
