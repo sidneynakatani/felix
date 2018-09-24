@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20180923/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20180923/index.jpg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Python 2 ou 3?</h2> 
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Acredito que a maior dúvida quando começamos a programar em Python seja qual versão utilizar.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Utilizar uma versão estável e consolidada como a versão 2 ou uma versão mais nova com melhorias 
+					como a versão 3?
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Muitos vão falar que é a versão 3, mas o problema nessa versão é a <strong>retrocompatibilidade</strong>.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					A <i>retrocompatibilidade</i> é quando uma nova versão de software não tem compatibilidade com algumas ou 
+					todas as funções que existem na versão anterior.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					No caso do Python quando existe o upgrade da versão 2 para 3, algumas funcionalidades param de funcionar, 
+					alguns casos com simples ajustes de sintaxe outros alteram a assinatura do método e na pior das hipóteses 
+					uma alteração na nomenclatura do método.
+				</p>
+				
+				<h3 align="center" style="margin-top: 70px">
+					Qual das versões utilizar?
+				</h3> 
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para quem está começando um projeto, com certeza a versão mais atual 3 é a mais indicada.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Com a versão mais nova já podemos nos beneficiar  das melhorias implementadas.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Agora para quem já está utilizando a versão 2, seria interessante instalar a versão 3, 
+					criando uma branch e migrando aos poucos.
+				</p>
+				
+				
+				<h3 align="center" style="margin-top: 70px">
+					Migração.
+				</h3> 
+
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20180923/migration.jpg"/>
+			    </div>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Uma forma de migrar é criar uma branch e ajustar as funções que não são compatíveis com a nova versão.
+				</p>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Mas em alguns casos, alguns métodos vão funcionar somente em uma das versões.
+				</p>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Um exemplo é o método <i>input()</i> na versão 2 e a que na versão 3 foi alterado para <i>raw_input()</i>.
+				</p>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Uma forma de contornar isso é fazendo um “If maroto” verificando a versão utilizado:
+				</p>
+				
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					<code>
+						from sys import version_info </br></br>
+
+						if version_info.major > 2:</br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nome = input(‘Nome: ‘)</br>
+						else:</br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nome = raw_input(‘Nome: ‘)</br>
+					</code>
+				</p>
+				
+				<p align="left" style="margin-top: 20px;" class="lead">
+					Pode não ser uma forma elegante de se escrever o código, mas é somente uma demonstração de uma solução 
+					rápida, podemos aprimorar essa técnica.
+				</p>
+				
+				
+			   
+				<h3 style="margin-top: 70px;" >Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					Se está iniciando um novo projeto Python não pense duas vezes, comece com a versão 3. A versão Python 3 
+					já está bem estável e pode ser utilizada sem medo, já para quem está utilizando a versão Python 2 deve 
+					começar a planejar uma migração, pois a versão 2 pode ser descontinuada em 2020.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
