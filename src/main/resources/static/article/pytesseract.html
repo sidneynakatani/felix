@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102268397-1', 'auto');
+    ga('send', 'pageview');
+
+   </script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20181014/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt="" 
+			src="../../img/works/20181014/index.jpeg"/>
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">OCR com Python.</h2> 
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O OCR ou o acrônimo em português de <i>"Reconhecimento Ótico de Caracteres"</i> é a capacidade 
+					de extração de caracteres de imagens.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					A tecnologia do OCR pode ser aplicado em várias soluções como análise de contratos, cheques, 
+					imagens digitalizados, também pode ser utilizado em iot para verificar placas de carros.
+				</p>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Com Python podemos utilizar o pacote pytesseract para acessar o software Tesseract e 
+					extrair caracteres de imagens.
+				</p>
+				
+				
+				
+				<h3 align="center" style="margin-top: 70px">
+					Como instalar e utilizar pytesseract.
+				</h3> 
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Primeiro precisamos instalar o tesseract para utilizar a capacidade de OCR.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<code>$ sudo apt-get install tesseract-ocr</code>
+				</p>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20181014/install.jpeg"/>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Agora precisamos instalar o <strong>pytesseract</strong> para acessar o tesseract: </br>
+					<code>$ pip install pytesseract</code>
+				</p>
+				
+			
+				<p align="left" style="margin-top: 20px" class="lead">
+					Agora já podemos testar uma extração de caracteres via Python.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Vamos extrair o texto da imagem abaixo, nesse caso o meu nome “Sidney”.
+				</p>
+
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20181014/teste.jpeg"/>
+			    </div>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<code> >>>import Image</code></br>
+					<code> >>>import pytesseract</code></br>
+					<code> >>>print pytesseract.image_to_string(Image.open('/tmp/teste.jpeg'))</code>
+				</p>
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20181014/exemplo.jpeg"/>
+			    </div>
+				
+			   
+				<h3 style="margin-top: 70px;" >Conclusão.</h3>
+				
+				<p align="left" class="lead">
+					Uma forma simples e rápida utilizando <strong>pytesseract</strong> e <strong>Tesseract</strong>, podemos 
+					fazer aplicações utilizando OCR sem muito esforço e com poucas linhas de comando.
+				</p>
+
+			</div>
+	  </div>
+	  
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
