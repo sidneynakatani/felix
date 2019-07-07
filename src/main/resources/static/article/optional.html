@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20190706/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20190706/index.jpeg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Java Optional.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O <i><strong>Optional</strong></i> é uma classe do Java 8 que vai ajudar a remover 
+					vários problemas de condicionais confusas.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">Da família
+					Do pacote “util”(<i>java.util.Optional</i>), a classe Optional pode receber 
+					ou não valores nulos.
+				<p />
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Podemos evitar casos de <i><strong>NullPointerException</strong></i> quando 
+					utilizamos a classe Optional.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Outro benefício de se utilizar a classe Optional é deixar seu código mais claro 
+					e limpo, pois a proposta reduz a necessidade de utilização de condicionais 
+					como if/else.
+				</p>
+
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Lembrando que o Optional ajuda a evitar problemas com os erros nulos, mas não vai 
+					eliminar o problema, mas com boas práticas o problema é reduzido quase que 100%.
+				<p />
+
+
+
+				<h3 align="center" style="margin-top: 70px">
+					Optional na prática.
+				</h3>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					No primeiro exemplo, vamos demonstrar como passar 2 String’s, a primeira nula e a 
+					segunda com valor e verificar se os valores estão presentes.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/4f9d3c06e80c6abc6231c66f19b3c742.js"></script>
+				</div>
+				
+				
+				 <p align="left" style="margin-top: 20px" class="lead">
+					Saída:
+				 </p>
+				<div class="panel panel-default">
+				  <div class="panel-body" align="left">
+						<code>
+						false</br>
+						true
+						</code>			
+				  </div>
+				</div>
+				
+				
+				<p align="left" style="margin-top: 70px" class="lead">
+					Neste outro exemplo, podemos verificar se existe um valor e manipular o valor 
+					via “arrow function”.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/3df966b4001c37341b2d01fe4955a096.js"></script>
+				</div>
+				
+				
+				 <p align="left" style="margin-top: 20px" class="lead">
+					Saída:
+				 </p>
+				<div class="panel panel-default">
+				  <div class="panel-body" align="left">
+						<code>
+							Size: 6
+						</code>			
+				  </div>
+				</div>
+				
+				<p align="left" style="margin-top: 70px" class="lead">
+					Agora vamos testar uma condicional que verifica se o valor está nulo  e desvia o 
+					fluxo para uma condição especificada. 
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/cc31215d0fe85774c0ca7499aafe320c.js"></script>
+				</div>
+				
+				
+				 <p align="left" style="margin-top: 20px" class="lead">
+					Saída:
+				 </p>
+				<div class="panel panel-default">
+				  <div class="panel-body" align="left">
+						<code>
+							Your name: Sidney
+						</code>			
+				  </div>
+				</div>
+				
+				<p align="left" style="margin-top: 70px" class="lead">
+					Outra funcionalidade legal, agora utilizando um filtro para verificar o valor da entrada.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/2719aef64437e1ef32467b877d07b059.js"></script>
+				</div>
+				
+				
+				 <p align="left" style="margin-top: 20px" class="lead">
+					Saída:
+				 </p>
+				<div class="panel panel-default">
+				  <div class="panel-body" align="left">
+						<code>
+							Is 2019: true
+						</code>			
+				  </div>
+				</div>
+				
+				<p align="left" style="margin-top: 70px" class="lead">
+					O Optional aceita todos Objetos, abaixo um exemplo passando um Pojo.
+				</p>
+				
+				<div>
+					<script src="https://gist.github.com/sidneynakatani/091359f7bca0ca33ab4e011d555b7c72.js"></script>
+				</div>
+				
+				
+				 <p align="left" style="margin-top: 20px" class="lead">
+					Saída:
+				 </p>
+				<div class="panel panel-default">
+				  <div class="panel-body" align="left">
+						<code>
+							Sidney</br>
+							Catarina</br>
+							Melissa</br>
+							</br>
+							Teste Teste</br>
+							null
+						</code>			
+				  </div>
+				</div>
+				
+
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					O Optional ajuda muito a evitar códigos confusos e deixar seu código mais limpo 
+					e coeso, a API Java tem várias classes que podemos utilizar para melhorar a codificação, 
+					o Optional é uma delas.
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
