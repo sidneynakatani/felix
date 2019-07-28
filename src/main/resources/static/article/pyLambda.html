@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20190728/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20190728/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Python e Lambda.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Funções <code>lambdas</code> estão sendo muito utilizadas na programação pela clareza da 
+					sintaxe que geralmente pode ser feita em uma linha.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Em Python, a diferença entre uma função normal e uma função <code>lambda</code> é que não 
+					precisamos declarar <strong><i>def</i></strong>  no início da função e nem  
+					<strong><i>return</i></strong> para determinar o retorno da função.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Em contrapartida, com funções lambdas é necessário indicar com a palavra reservada 
+					<code>lambda</code> que estamos iniciando uma função tipo lambda.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O mais interessante na utilização do lambda em Python é a possibilidade de criar 
+					<i><strong>Funções Anônimas</i></strong>.
+				</p>
+
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					As funções anônimas possibilitam que a função seja escrita e chamada dentro de um 
+					parâmetro de outra função, vamos exemplificar mais abaixo.
+				</p>
+
+
+
+				<h3 align="center" style="margin-top: 70px">
+					Utilizando Lambda.
+				</h3>
+				
+			    
+			    <p align="left" style="margin-top: 20px" class="lead">
+					Vamos apresentar alguns exemplos como o implementar lambda em Python, primeiro uma função 
+					normal e depois a mesma função utilizando lambda.
+				</p>
+				
+				<script src="https://pastebin.com/embed_js/TMsJNB2i"></script>
+				
+				<div style="margin-top: 20px">
+					<script  src="https://pastebin.com/embed_js/JE6Em2zq"></script>
+				</div>
+				
+				<div style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/5uuLXV4y"></script>
+				</div>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Repare que utilizando lambda não precisamos mais declarar <i>def</i> e <i>return</i>, 
+					mas precisamos informar que estamos começando uma função com a palavra reservada 
+					<i>lambda</i>.
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Observando a sintaxe, após a palavra reservada “lambda”, colocamos os parâmetros de 
+					entrada separado por vírgula e depois dos “:” a regra com o retorno.
+				</p>
+				
+				<h3 align="center" style="margin-top: 70px">
+					Map, Reduce e Filter.
+				</h3>
+				
+				<div align="center" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190728/map.png" />
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					As funções anônimas são bem úteis quando utilizamos as funções map, Reduce e filter.
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					A função <code>map</code> possibilita transformar uma lista de um tipo para uma 
+					lista de outro tipo:
+				</p>
+			    
+			    <script src="https://pastebin.com/embed_js/dzAsgyyT"></script>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					A função <code>filter</code> possibilita filtrar os elementos de uma lista passando 
+					como parâmetro uma função com as regras do filtro:
+				</p>
+			    
+			    <script src="https://pastebin.com/embed_js/fDUXdfW6"></script>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					A função <code>reduce</code> possibilita reduzir a lista em um único valor:
+				</p>
+			    
+			    <script src="https://pastebin.com/embed_js/eaKfPknY"></script>
+			    
+
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					A primeira visão utilizando lambda e Python pode parecer meio estranho, mas acostumando 
+					com a sintaxe, o código fica bem mais limpo do que utilizando funções normais, salvo os 
+					casos onde precisamos fazer a chamada de uma mesma função no código.
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
