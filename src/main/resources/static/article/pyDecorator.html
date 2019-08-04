@@ -37,7 +37,7 @@
 </head>
 
 <!--  Thumb -->
-<img src="../../img/works/20190728/index.jpg" alt=""
+<img src="../../img/works/20190803/index.jpg" alt=""
 	style="display: none;" />
 
 
@@ -62,7 +62,7 @@
 	<div align="center">
 
 		<img class="img-responsive" alt=""
-			src="../../img/works/20190728/index.jpg" />
+			src="../../img/works/20190803/index.jpg" />
 
 	</div>
 
@@ -76,108 +76,65 @@
 			<div class="row"
 				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
 
-				<h2 align="center">Python e Lambda.</h2>
+				<h2 align="center">Decorator com Python.</h2>
 
 				<p align="left" style="margin-top: 50px" class="lead">
-					Funções <code>lambdas</code> estão sendo muito utilizadas na programação pela clareza da 
-					sintaxe que geralmente pode ser feita em uma linha.
+					O <strong><i>Decorator</i></strong> são utilizados para alterar o comportamento  de 
+					uma função ou classe sem precisar alterá-la, simplesmente adicionando um <i>@nomeDecorator</i>.
 				</p>
 
 				<p align="left" style="margin-top: 20px" class="lead">
-					Em Python, a diferença entre uma função normal e uma função <code>lambda</code> é que não 
-					precisamos declarar <strong><i>def</i></strong>  no início da função e nem  
-					<strong><i>return</i></strong> para determinar o retorno da função.
+					O <strong><i>Decorator</i></strong> pode ser comparado com um <strong><i>Interceptor</i></strong> 
+					no mundo Web, onde interceptamos a requisição antes de executar o método.
 				<p/>
 
 				<p align="left" style="margin-top: 20px" class="lead">
-					Em contrapartida, com funções lambdas é necessário indicar com a palavra reservada 
-					<code>lambda</code> que estamos iniciando uma função tipo lambda.
+					Muito útil para criação de validação de campos como CPF, RG, Telefone, Idade, Nome, 
+					entre outros, sem precisar alterar o método principal.
 				</p>
 
 				<p align="left" style="margin-top: 20px" class="lead">
-					O mais interessante na utilização do lambda em Python é a possibilidade de criar 
-					<i><strong>Funções Anônimas</i></strong>.
+					Outra coisa legal é utilizar o Decorator para deixar seu código mais limpo, umas vez que 
+					você desacopla partes do código do método.
 				</p>
 
 
 				<p align="left" style="margin-top: 20px" class="lead">
-					As funções anônimas possibilitam que a função seja escrita e chamada dentro de um 
-					parâmetro de outra função, vamos exemplificar mais abaixo.
+					Por trabalhar com <i>Clojures</i>, ou seja, funções dentro de funções, o retorno 
+					será a própria função.
 				</p>
 
 
 
 				<h3 align="center" style="margin-top: 70px">
-					Utilizando Lambda.
-				</h3>
-				
-			    
-			    <p align="left" style="margin-top: 20px" class="lead">
-					Vamos apresentar alguns exemplos como o implementar lambda em Python, primeiro uma função 
-					normal e depois a mesma função utilizando lambda.
-				</p>
-				
-				<script src="https://pastebin.com/embed_js/TMsJNB2i"></script>
-				
-				<div style="margin-top: 20px">
-					<script  src="https://pastebin.com/embed_js/JE6Em2zq"></script>
-				</div>
-				
-				<div style="margin-top: 20px">
-					<script src="https://pastebin.com/embed_js/5uuLXV4y"></script>
-				</div>
-				
-				
-				<p align="left" style="margin-top: 20px" class="lead">
-					Repare que utilizando lambda não precisamos mais declarar <i>def</i> e <i>return</i>, 
-					mas precisamos informar que estamos começando uma função com a palavra reservada 
-					<i>lambda</i>.
-				</p>
-				
-				<p align="left" style="margin-top: 50px" class="lead">
-					Observando a sintaxe, após a palavra reservada “lambda”, colocamos os parâmetros de 
-					entrada separado por vírgula e depois dos “:” a regra com o retorno.
-				</p>
-				
-				<h3 align="center" style="margin-top: 70px">
-					Map, Reduce e Filter.
+					Criando um Decorator.
 				</h3>
 				
 				<div align="center" style="margin-top: 20px">
-					<img class="img-responsive" alt="" src="../../img/works/20190728/map.png" />
+					<img class="img-responsive" alt="" src="../../img/works/20190803/decorators.png" />
 			    </div>
+				
 			    
-			    <p align="left" style="margin-top: 50px" class="lead">
-					As funções anônimas são bem úteis quando utilizamos as funções map, Reduce e filter.
+			    <p align="left" style="margin-top: 20px" class="lead">
+					Vamos criar um decorator simples, onde vamos interceptar o primeiro argumento e validar se 
+					é maior ou menor que 18.
 				</p>
 				
-				<p align="left" style="margin-top: 50px" class="lead">
-					A função <code>map</code> possibilita transformar uma lista de um tipo para uma 
-					lista de outro tipo:
+				<script src="https://pastebin.com/embed_js/hzUYvmEH"></script>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Repare que não alteramos a função principal e colocamos uma validação totalmente desacoplada, 
+					ou seja podemos a qualquer hora remover a validação sem alterar a função principal.
 				</p>
-			    
-			    <script src="https://pastebin.com/embed_js/dzAsgyyT"></script>
-			    
-			    <p align="left" style="margin-top: 50px" class="lead">
-					A função <code>filter</code> possibilita filtrar os elementos de uma lista passando 
-					como parâmetro uma função com as regras do filtro:
-				</p>
-			    
-			    <script src="https://pastebin.com/embed_js/fDUXdfW6"></script>
-			    
-			    <p align="left" style="margin-top: 50px" class="lead">
-					A função <code>reduce</code> possibilita reduzir a lista em um único valor:
-				</p>
-			    
-			    <script src="https://pastebin.com/embed_js/eaKfPknY"></script>
-			    
+				
+				
 
 				<h3 style="margin-top: 70px;">Conclusão.</h3>
 
 				<p align="left" class="lead">
-					A primeira visão utilizando lambda e Python pode parecer meio estranho, mas acostumando 
-					com a sintaxe, o código fica bem mais limpo do que utilizando funções normais, salvo os 
-					casos onde precisamos fazer a chamada de uma mesma função no código.
+					O Decorator pode ser muito útil quando precisamos adicionar alguma validação ou alteração de 
+					comportamento ou fluxo sem alterar o código do método ou classe principal.
 				</p>
 
 			</div>
