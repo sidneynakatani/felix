@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20190908/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20190908/index.jpeg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Flask-JWT.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O <strong>Flask-JWT</strong> é a abstração do <strong>JWT</strong>(Json Web Token) encapsulado em um 
+					pequeno módulo para ser utilizado no Micro-servidor Flask.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O JWT é uma forma de garantir integridade dos dados a partir de uma autenticação baseada em token.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O token JWT é composto por 3 componentes separados por “.”: <strong>Header</strong>, 
+					<strong>Payload</strong> e <strong>Signature</strong>.
+				</p>
+				
+				<div align="center" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190908/jwt.jpeg" />
+			    </div>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					O <strong>Header</strong> é onde definimos qual tipo de token e que tipo de criptografia 
+					é utilizado na composição.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					O <strong>Payload</strong> são as informações que serão utilizados para algum tratamento 
+					após a descriptografia.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O <strong>Signature</strong> é a chave secreta que será composta no token.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Este Post não entrará em detalhes como funciona o JWT, a abordagem será para mostrar 
+					uma implementação JWT e Flask.
+				</p>
+
+
+				<h3 align="center" style="margin-top: 70px">
+					Implementação Flask+JWT.
+				</h3>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Primeiro precisamos fazer a instalação do Flask e do Flask-JWT.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Instalação do Flask:</br>
+					<code>$ sudo pip install Flask</code>
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Instalação do Flask-JWT:</br>
+					<code>$ sudo pip install Flask-JWT</code>
+				</p>
+				
+				<div align="left" style="margin-top: 50px">
+					<script src="https://pastebin.com/embed_js/Bg3nEEw4"></script>
+			    </div>
+			   
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Rode a aplicação e faça uma chamada via curl para gerar uma chave JWT:</br>
+					<code>
+					curl -H "Content-Type: application/json" </br>
+					      -d '{"username":"user2", "password": "abcxyz"}' </br>
+					      -X POST http://127.0.0.1:5000/login
+					</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+				    Se tudo deu certo é gerado uma chave:
+					<code>
+					{</br>
+  						"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.</br>
+  						eyJpZGVudGl0eSI6MiwiaWF0IjoxNTY3OTcwNDMxLCJuYmYiOjE1Njc5NzA0MzEsImV4cCI6MTU2Nzk3MDczMX0.</br>
+  						AahLjtEo9QKf31JoceXs7s2IbrqaGk4EeNcNb-Xf3jo"</br>
+					}	
+					</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Faça a chamada agora para verificar se a chave é válida: </br>
+					<code>
+							curl -H 'Accept: application/json' </br>
+							-H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.</br>
+							eyJpZGVudGl0eSI6MiwiaWF0IjoxNTY3OTcwNDMxLCJuYmYiOjE1Njc5NzA0MzEsImV4cCI6MTU2Nzk3MDczMX0.</br>
+							AahLjtEo9QKf31JoceXs7s2IbrqaGk4EeNcNb-Xf3jo"  </br>
+							http://127.0.0.1:5000/protected
+					</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+				    Se tudo deu certo, é retornado o id do objeto:
+					<code>
+						User(id='2')
+					</code>
+				</p>
+				
+			
+			    
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					Uma forma simples de utilizar uma autenticação JWT baseada em token em Python utilizando Flask 
+					e uma abstração JWT, nesse Post apresentamos uma forma simplista da solução, existe várias 
+					configurações para customizar sua aplicação.
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
