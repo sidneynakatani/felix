@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20190915/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20190915/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Ordenação Radix.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Conhece o padrão de ordenação por <strong>Radix</strong>?
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					A proposta de ordenação por Radix é ordenar números em ordem crescente baseado 
+					nos seus dígitos.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Diferente de outros padrões de ordenação, o Radix não compara o número e sim 
+					a posição dos seus dígitos.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Radix segue um padrão de comparação do dígito menos significante ou 
+					<strong>Least Significant Digit (LSD)</strong> para o mais significante 
+					<strong>Most Significant Digit (MSD)</strong>.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Segue um exemplo como funciona a ordenação por Radix:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Dada a entrada de uma lista de números inteiros:
+				</p>
+				
+				<div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190915/1.png" />
+			    </div>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Agora vamos verificar o dígito menos significativo:
+				</p>
+
+				<div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190915/2.png" />
+			    </div>
+			    
+			    <p align="left" style="margin-top: 20px" class="lead">
+					A primeira ordenação é pelo menor dígito significativo:
+				</p>
+
+				<div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190915/3.png" />
+			    </div>
+			    
+			    
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Agora vamos ordenar pelo próximo dígito significativo:
+				</p>
+
+				<div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190915/5.png" />
+			    </div>
+			    
+			     <p align="left" style="margin-top: 20px" class="lead">
+					Novamente, ordenamos agora pelo menor número encontrado no dígito:
+				</p>
+
+				<div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190915/6.png" />
+			    </div>
+			    
+			     <p align="left" style="margin-top: 70px" class="lead">
+					Finalmente ordenamos pelo dígito mais significativo:
+				</p>
+
+				<div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190915/7.png" />
+			    </div>
+			    
+			    <p align="left" style="margin-top: 20px" class="lead">
+					Agora a última ordenação:
+				</p>
+
+				<div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190915/8.png" />
+			    </div>
+
+
+				<h3 align="center" style="margin-top: 70px">
+					Radix com Java.
+				</h3>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Vamos montar um algoritmo baseado no padrão Radix utilizando Java.
+				</p>
+				
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/HzbCAhDs"></script>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 30px" class="lead">
+					Segue a sequência ordenada:</br>
+				    <code>
+				    	<strong>Saída</strong>: 2 3 23 24 45 66 75 90 170 232 234 802 
+				    </code>
+			    </p>
+			   
+			    
+			    <p align="left" style="margin-top: 20px" class="lead">
+					Uma forma de ordenação de números baseado em seus dígitos bem eficiente.
+				</p>
+				
+				
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					Mais uma forma de ordenar números eficiente que podemos utilizar no dia dia, 
+					além de ser uma forma de estudo matemático.
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
