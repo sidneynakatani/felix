@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20190928/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20190928/index.jpeg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Apache RocketMQ.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O <strong>RocketMQ</strong> é um framework Java para mensageria e plataforma de 
+					streaming de baixa latência.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Um framework de mensageria open source que é utilizado desde 2012 pela plataforma 
+					do Alibaba.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Com uma configuração simples, capacidades para auditorias e sua baixa latência, 
+					o RocketMQ é ideal para instituições financeiras.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					O RocketMQ é uma ótima forma de desacoplar algumas funcionalidades da aplicação.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Como o framework já está consolidado desde 2012, existem várias implementações 
+					como <strong>Python</strong> e <strong>Nodejs</strong>.
+				</p>
+				
+			
+				
+				
+				<h3 align="center" style="margin-top: 70px">
+					Implementação Producer/Consumer Java.
+				</h3>
+				
+			
+				<p align="left" style="margin-top: 20px" class="lead">
+					Primeiro precisamos baixar o gerenciador de filas(rocketmq-all-4.4.0-source-release) no 
+					<a href="https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.4.0/rocketmq-all-4.4.0-source-release.zip" 
+					target="_blank">link</a>.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Agora vamos descompactar o arquivo e instalar as dependências via Maven: 
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/JWFiCwXg"></script>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Vamos iniciar o Server:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/aiKyirSW"></script>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Podemos agora iniciar o Broker:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/SNUNfjpV"></script>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Agora vamos criar um tópico(TopicTest):
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/11K12FCY"></script>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Crie um projeto Maven e adicione as dependências no POM.xml: 
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/MwRd7UU7"></script>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Podemos agora criar um Producer:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/PiuAscv5"></script>
+			    </div>
+			    
+			     <p align="left" style="margin-top: 50px" class="lead">
+					Agora um Consumer:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/SWQDkSah"></script>
+			    </div>
+			    
+			    
+			    
+			    <div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20190928/teste.png"/>
+			    </div>
+			    
+			    
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					O RocketMQ é uma ótima opção de mensageria para quem precisa fazer uma implantação 
+					de uma solução para desacoplar a aplicação ainda ganhando performance devido a 
+					baixa latência do framework. 
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
