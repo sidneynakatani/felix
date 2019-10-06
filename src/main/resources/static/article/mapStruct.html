@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20191005/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20191005/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">MapStruct.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					A Api <strong>MapStruct</strong> contêm funcionalidades que facilitam o mapeamento  
+					entre 2 Java Beans.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Utilizando a Api(MapStruct) podemos converter por exemplo um Dto em uma Entity com facilidade.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					A única tarefa que precisamos fazer é criar uma interface e mapear via anotação todos 
+					os campos que desejamos transferir de uma Bean para outra.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					A Api pode ajudar muito quando precisamos utilizar o pattern <strong><i>“Adapter”</i></strong> 
+					onde geralmente precisamos transferir os dados de entrada do endpoint em um Pojo para ser 
+					persistido na base de dados.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Geralmente esse processo de criação é feito totalmente manualmente criando uma classe que 
+					fica responsável em fazer a transferência de dados. Utilizando <strong>MapStruct</strong>, 
+					essa tarefa trabalhosa fica totalmente a cargo da API.
+				</p>
+				
+			
+				
+				
+				<h3 align="center" style="margin-top: 70px">
+					Configurando MapStruct.
+				</h3>
+				
+				<div align="center" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20191005/mapStruct.png"/>
+			    </div>
+				
+			
+				<p align="left" style="margin-top: 70px" class="lead">
+					Primeiro precisamos adicionar as dependências no POM.xml:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/CVXzWCBr"></script>
+			    </div>
+			    
+			    
+				<p align="left" style="margin-top: 70px" class="lead">
+					Agora vamos adicionar os plugins para gerar os fontes da implementação:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/Rvqn2BXf"></script>
+			    </div>
+			    
+			    
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Criamos uma classe Dto:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/yAGk9bjT"></script>
+			    </div>
+			    
+			    
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Criamos uma classe Entity:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/1HB9FCrs"></script>
+			    </div>
+	   
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Agora precisamos criar uma interface de mapeamento de dados:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/Rtxfxf2J"></script>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Repare que somente criamos uma interface para mapear os dados, não foi 
+					criado sua implementação.
+				</p>
+				
+				<p align="left" style="margin-top: 30px" class="lead">
+					A “mágica” acontece agora, rodando o maven o comando: <strong>mvn clean install</strong>.
+				</p>
+				
+				<p align="left" style="margin-top: 30px" class="lead">
+					Agora toda implementação vai ser criado na pasta: <i>/target/generated-sources/annotations/</i>.
+				</p>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Dentro do diretório “annotations” foi criado a implementação do mapeamento:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/PJ9xbvUe"></script>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Vamos fazer um teste:
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/6wdHqFhb"></script>
+			    </div>
+		
+		
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					Podemos otimizar o tempo de desenvolvimento utilizando a API MapStruct quando existe a necessidade 
+					de converter dados de entrada em dados de negócio, além de ser bem prático e deixar o código 
+					mais limpo.
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
