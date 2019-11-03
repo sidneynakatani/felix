@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20191103/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20191103/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Python+mqtt.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O mqtt é um acrônimo de Message Queuing Telemetry Transport, um protocolo de mensagem leve 
+					muito utilizado em serviços de mensagens para dispositivos móveis ou iot.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para conectar no broker mqtt utilizando Python, utilizamos a biblioteca paho-mqtt.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O paho-mqtt é uma biblioteca que facilita a integração entre Python e o protocolo mqtt.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Soluções utilizando filas como mqtt pode ser uma forma de desafogar o sistema, podendo 
+					ser acionado conforme vão chegando às mensagens.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Utilizando Python e mqtt pode se resolver vários problemas relacionados com sincronização 
+					e fluxo de dados.
+				</p>
+				
+			   
+				
+				<h3 align="center" style="margin-top: 70px">
+					Instalando e testando.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20191103/subscriptions.png" />
+			    </div>
+				
+				
+			
+				<p align="left" style="margin-top: 70px" class="lead">
+					Para instalar a biblioteca paho-mqtt vamos utilizar o Pip:
+					<code>$pip install paho-mqtt</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Vamos criar 2 partes da aplicação, a primeira parte será para receber as mensagens e a 
+					segunda para enviar.
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Vamos criar um subscriber(Receptor de mensagens):
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/r9hnk2c3"></script>
+			    </div>
+				
+				
+				<p align="left" style="margin-top: 70px" class="lead">
+					Agora vamos criar o publisher(Envio de mensagens):
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/ENjRu4jf"></script>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Repare que o subscriber vai receber uma mensagem "Test". 
+				</p>
+			    
+			    
+			    <p align="left" style="margin-top: 20px" class="lead">
+					Exemplo bem simples para ter uma idéia de como funciona a fila de um protocolo mqtt.
+				</p>
+			    
+			  
+			
+		
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					A combinação Python e Mqtt pode resolver vários problemas de sincronização e fluxo de 
+					informações, apesar do exemplo utilizar Python, podemos utilizar qualquer outra linguagem.
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
