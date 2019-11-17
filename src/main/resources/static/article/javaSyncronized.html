@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20191117/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20191117/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Java syncronized.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Não é segredo que trabalhar com várias threads é algo bem complexo e deve ser 
+					trabalhado com cautela.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					A palavra reservada <strong><i>syncronized</i></strong> é utilizada para garantir 
+					que todas as threads trabalhem sincronizadas.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Utilizando o syncronized em métodos, garantimos que o método só é acessado 
+					por 1 thread por vez.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Podemos utilizar o syncronized diretamente na assinatura do método ou somente no 
+					bloco do método que gostaria de sincronizar.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Em resumo, podemos sincronizar métodos de instância, métodos estáticos e blocos 
+					dos métodos.
+				</p>
+				
+			   
+				
+				<h3 align="center" style="margin-top: 70px">
+					Utilizando syncronized.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20191117/synchronized.jpg" />
+			    </div>
+				
+				
+			
+				<p align="left" style="margin-top: 70px" class="lead">
+					Vamos criar uma situação que acontece todos os dias em bancos: os <strong>saques</strong> e 
+					<strong>depósitos</strong>.
+
+				</p>
+				
+				<p align="left" style="margin-top: 30px" class="lead">
+					Vamos criar uma classe com métodos não sincronizados que faz o saque, depósito e saldo.
+				</p>
+				
+				<p align="left" style="margin-top: 30px" class="lead">
+					Para testar esse código, vamos criar 10 threads acessando os métodos de depósito e saque 
+					e no final mostrar o saldo.
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/1TDZUBzM"></script>
+			    </div>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/U9edsx7K"></script>
+			    </div>
+				
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Apesar de estarmos depositando 100 e depois sacar 100, por que o resultado não é zero e 
+					sim valores aleatórios?
+				</p>
+				
+				
+				<p align="left" style="margin-top: 30px" class="lead">
+					Isso acontece devido ao acesso as threads não estarem sincronizadas, ou seja não temos a 
+					garantia de qual método vai ser executado.
+				</p>
+				
+				<p align="left" style="margin-top: 30px" class="lead">
+					Para resolver isso adicionamos a palavra reservada syncronized na assinatura do método 
+					e garantimos que o método só será executado por 1 thread por vez
+				</p>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/mzJMWM67"></script>
+			    </div>
+				
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/J9rB9JmW"></script>
+			    </div>
+				
+			
+		
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					O syncronized é a forma mais simples de garantir que os métodos da sua classe trabalhem 
+					de forma sincronizadas e segura.
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
