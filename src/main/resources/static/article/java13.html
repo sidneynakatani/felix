@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20191124/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20191124/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Java 13.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O Java 13 foi lançado em Setembro de 2019, conforme as regras de lançamento a cada 6 meses.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Obedecendo a regra de lançamento, teremos 2 versões anuais, 1 em Março e outro em Setembro.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Essa foi uma forma de liberar novas capacidades de forma rápida aos desenvolvedores.
+
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Nessa versão 13 da Jdk, foram liberados 5 novas capacidades ou <strong>JEP</strong> 
+					(Java Enhacement Proposal).
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Algumas das novidades foram melhorias de capacidades liberados nas versões anteriores.
+				</p>
+				
+			   
+				
+				<h3 align="center" style="margin-top: 70px">
+					Novidades Java 13.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20191124/jdk.jpg" />
+			    </div>
+				
+				
+			
+				<p align="left" style="margin-top: 70px" class="lead">
+					Como falamos anteriormente, foram 5 alterações nessa nova versão.
+				</p>
+				
+				<p align="left" style="margin-top: 30px" class="lead">
+					Seguem as alterações:
+				</p>
+				
+				<div align="left" class="lead">
+				
+					<ol>
+						
+						<li style="margin-top: 20px">
+							<strong>JEP 350 Dynamic CDS Archives</strong>: essa feature foi melhorada a 
+							performance do Class Data Sharing (CDS) que foi introduzido no Java 10;
+						</li>
+						
+						<li style="margin-top: 20px">
+							<strong>JEP 351 ZGC Uncommit Unused Memory</strong>: na versão anterior o 
+							GC não retornava a memória heap não utilizada para o sistema operacional, na versão 13 
+							essa melhoria foi introduzida;
+						</li>
+						
+						<li style="margin-top: 20px">
+							<strong>JEP-353 Reimplement the Legacy Socket API</strong>: as versões anteriores 
+							da API de Socket tinham uma implementação um pouco complicado, a nova implementação 
+							simplifica o uso e é compatível com as novas extensões;
+						</li>
+						
+						<li style="margin-top: 20px">
+							<strong>JEP-354 Switch Expressions</strong>:  as expressões adicionadas ao Switch 
+							no Java 12 como a utilização da condição <strong>OR</strong>, retornar o valor 
+							diretamente no <strong>break</strong>, utilização de <strong>Arrow functions</strong> 
+							foram mantidos, a novidade foi a  introdução da palavra reservada <strong>yield</strong> 
+							para retornar o valor;
+							
+							<div align="left" style="margin-top: 30px">
+								<script src="https://pastebin.com/embed_js/ndGvPCVU"></script>
+						    </div>
+						</li>
+						
+						<li style="margin-top: 20px">
+							<strong>JEP-355 Text Blocks</strong>: introdução da feature multi-line string literal, 
+							onde podemos dispensar a utilização de escapes.
+							
+							<div align="left" style="margin-top: 30px">
+								<script src="https://pastebin.com/embed_js/rP0La2Zt"></script>
+						    </div>
+						</li>
+					</ol>
+				
+				 </div>
+				 
+				 <p align="left" style="margin-top: 30px" class="lead">
+					<strong>Observação</strong>: as features Jep-354 e Jep-355 ainda são do tipo Preview, para ativar 
+					precisamos adicionar os parâmetros: <strong>javac --enable-preview --release</strong> e 
+					<strong>java --enable-preview</strong>.
+				 </p>
+			
+		
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					As novas releases semestrais estão facilitando a vida do desenvolvedor e da própria Oracle que 
+					recebem o feedback mais rápido para corrigir nos próximos releases.
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
