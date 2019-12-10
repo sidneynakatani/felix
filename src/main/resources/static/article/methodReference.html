@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20191208/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20191208/index.jpeg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Method reference.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O Java 8 trouxe várias inovações, entre elas o <strong>Lambda</strong> e o 
+					<strong>Method Reference</strong>.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O Method Reference ajuda a deixar o código mais limpo e claro para o desenvolvedor, 
+					além de diminuir com uma quantidade significativa de linhas de códigos.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Nesse Post vamos falar sobre o Method Reference, lembrando que podemos substituir 
+					um método lambda em method reference.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Mas qual a vantagem de utilizar um Method Reference e não um método Lambda?
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Utilizando Method Reference o código fica mais legível, além de deixar mais 
+					explícito o que está sendo manipulado.
+				</p>
+				
+				
+				<h3 align="center" style="margin-top: 70px">
+					Exemplo Method Reference com Java.  
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20191208/method.png" />
+			    </div>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					O exemplo mais comum seria percorrer uma lista ou um mapa, no exemplo abaixo 
+					vamos percorrer um mapa com Lambda e depois com Method Reference.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Com Lambda: 
+				</p>
+			    
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/cvtYMKHt"></script>
+				</div>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Com Method Reference: 
+				</p>
+			    
+				<div align="left" style="margin-top: 30px">
+					<script src="https://pastebin.com/embed_js/KR9gPzNc"></script>
+				</div>
+				
+			    
+				<p align="left" style="margin-top: 20px" class="lead">
+					Repare como a sintaxe utilizando o Method Reference foi bem mais simples.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Quanto a performance, os dois modos tem uma velocidade parecidas, apesar 
+					do Lambda fazer uma chamada de método a mais.
+				</p>
+				
+			   
+				
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					As novas features das versões atuais do Java vieram para facilitar cada vez mais a vida do 
+					programador, com Method Reference podemos diminuir linhas de código e deixar mais 
+					legível e limpo.
+				</p>
+
+			</div>
+		</div>
+
+
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
