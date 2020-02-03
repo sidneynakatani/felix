@@ -37,7 +37,7 @@
 </head>
 
 <!--  Thumb -->
-<img src="../../img/works/20200126/index.jpg" alt=""
+<img src="../../img/works/20200202/index.jpg" alt=""
 	style="display: none;" />
 
 
@@ -62,7 +62,7 @@
 	<div align="center">
 
 		<img class="img-responsive" alt=""
-			src="../../img/works/20200126/index.jpg" />
+			src="../../img/works/20200202/index.jpg" />
 
 	</div>
 
@@ -76,79 +76,88 @@
 			<div class="row"
 				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
 
-				<h2 align="center">Redimensionando Java Array.</h2>
+				<h2 align="center">Java Queue.</h2>
 
 				<p align="left" style="margin-top: 50px" class="lead">
-					Você sabe redimensionar um classe Array após ter definido um tamanho fixo para ele?
+					A interface <strong>Queue</strong> é utilizada como uma fila baseada em memória.
 				</p>
 
 				<p align="left" style="margin-top: 20px" class="lead">
-					Provavelmente você vai pensar: <i>“Pra que utilizar o Array se eu posso utilizar 
-					uma interface List?“</i>.
+					As vantagens de utilizar a interface Queue é por ser rápido, eficiente, leve, 
+					thread safe e eficaz.
 				<p/>
 
 				<p align="left" style="margin-top: 20px" class="lead">
-					Sim, realmente a interface List é bem mais prática e flexível de utilizar que um 
-					Array, mas é importante conhecer bem a API Java para resolver alguns problemas 
-					de sistemas legados.
+					Por ser de simples implementação, pode ser muito eficaz para pequenas aplicações.
 				</p>
 				
 				<p align="left" style="margin-top: 20px" class="lead">
-					Você pode ter que corrigir um bug em algum sistema legado utilizando Array e 
-					não vai ficar convertendo tudo para List.
+					Sem a necessidade de utilização de outra aplicação, a interface Queue pode ser 
+					embarcado facilmente nas aplicações.
 				</p>
 				
 				<p align="left" style="margin-top: 20px" class="lead">
-					Outra ocasião que precisamos estar preparados é durante algum teste que tenha 
-					como requisito utilização de Array.
+					Ótimo para soluções onde é necessário implementações de FIFO(First In, First out).
 				</p>
 				
 				
 				<h3 align="center" style="margin-top: 70px">
-					Exemplo de uso. 
+					Utilizando Queue.
 				</h3>
 				
 				<div align="center">
-					<img class="img-responsive" alt="" src="../../img/works/20200126/rock-collection.png" />
+					<img class="img-responsive" alt="" src="../../img/works/20200202/queue.jpg" />
 			    </div>
 				
 				
 				<p align="left" style="margin-top: 70px" class="lead">
-					Imagine que você receba um teste que precise redimensionar um Array que 
-					foi definido com capacidade de 2 e agora ele precisa ter uma capacidade de 3.
-				</p>
-				
-				<p align="left" style="margin-top: 30px" class="lead">
-					A chave principal para fazer esse redimensionamento é utilizar o método 
-					<strong><i>arraycopy </i></strong> da classe System.
+					Inserindo na fila:
 				</p>
 			    
-				<div align="left" style="margin-top: 30px">
-					<script src="https://pastebin.com/embed_js/KmN3t5us"></script>
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/QgL73tNx"></script>
+				</div>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Consumindo a fila:
+				</p>
+			    
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/y70U0nWG"></script>
+				</div>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					Assim que o dado é consumido, automaticamente a informação é apagada.
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Verificar o próximo elemento da fila sem consumir:
+				</p>
+			    
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/Ku39rV4g"></script>
 				</div>
 			
 				<p align="left" style="margin-top: 50px" class="lead">
-					Bem simples, mas acredito que muita gente ia ficar com dúvidas de como 
-					implementar a solução.
+					Apagando o próximo elemento da fila:
 				</p>
-				
-				
-				<p align="left" style="margin-top: 30px" class="lead">
-					Se não foi o seu caso, parabéns, mas acredito que hoje é muito raro 
-					alguém que estude a API Java a fundo.
-				</p>
+			    
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/XbAru1FY"></script>
+				</div>
+
 				
 			
 				<h3 style="margin-top: 70px;">Conclusão.</h3>
 
 				<p align="left" class="lead">
-					Estudar a API Java pode ser muito importante para resolver alguns problemas 
-					rapidamente, além de ser totalmente recomendado se está pensando em fazer a 
-					prova para certificação Java.
+					O Queue pode ser muito eficaz em pequenas aplicações, por ser bem leve, 
+					podemos utilizar em aplicações onde necessita uma solução com FIFO 
+					sem muitas complicações.
 				</p>
 
 			</div>
-	 </div>
+	   </div>
 	</article>
 
 
