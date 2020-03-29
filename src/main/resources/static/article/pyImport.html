@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20200329/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20200329/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Import relativo e absoluto em Python.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Assim como outras linguagens de programação, o Python utiliza a importação de 
+					módulos e pacotes para organizar o código.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Mas em Python ainda existe muita dúvida principalmente quando falamos de 
+					importação <strong>relativa</strong> e <strong>absoluta</strong>.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Você conhece as diferenças entre esses dois tipos de import's?
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Um ponto de atenção é que entre as versões do Python 2 e 3 existem algumas diferenças.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Neste Post vamos mostrar as diferenças entre os import's e versões.
+				</p>
+				
+				
+				<h3 align="center" style="margin-top: 70px">
+					Mão na massa.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20200329/pack.png" />
+			    </div>
+				
+				
+				<p align="left" style="margin-top: 70px" class="lead">
+					Abaixo vamos apresentar uma estrutura de pacotes Python para exemplificar.
+				</p>
+				
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/bh5CSKtt"></script>
+				</div>
+			    
+				<div align="left" style="margin-top: 20px" class="lead">
+					No import <strong>Relativo</strong>, apontamos o caminho diretamente a partir de seu 
+					módulo que pode ser explícito ou implícito:
+				</div>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					Abaixo um exemplo utilizando <strong>import explícito</strong>:
+				</div>
+				
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/cvarL7tV"></script>
+				</div>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					Abaixo um exemplo utilizando <strong>import implícito</strong>:
+				</div>
+				
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/0JYUuSYK"></script>
+				</div>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					Lembrando que o import implícito não é possível nas versões Python 3.
+				</div>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					No import <strong>Absoluto</strong>, apontamos o caminho completo do módulo, 
+					ou seja, é obrigado apontar inicialmente o pacote e a partir dele os módulos, 
+					funções ou objetos.
+				</div>
+				
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/qqJ1vMXX"></script>
+				</div>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					Existem vantagens e desvantagens na utilização desses imports, no caso da 
+					<strong>relativa</strong> é a praticidade e na <strong>absoluta</strong> 
+					fica a clareza no código.
+				</div>
+				
+				
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					Fica a critério do desenvolvedor qual tipo de import vai utilizar, de qualquer 
+					forma é importante saber as duas formas para fins de conhecimento.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
