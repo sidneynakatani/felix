@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20200620/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20200620/index.jpeg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">CMake.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Provavelmente você conhece ou já ouviu falar sobre o <strong>Cmake</strong>?
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Mas você sabe como o CMake funciona?
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O CMake é um acrônimo de <i>"Cross-Platform Makefile Generator"</i>, basicamente um 
+					gerador de aplicação C/C++ multiplataforma.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Além de ajudar na distribuição da aplicação, o Cmake consegue deixar mais organizado 
+					o versionamento.
+				<p/>
+
+				
+				<h3 align="center" style="margin-top: 100px">
+					Exemplo de uso.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20200620/Cmake.png"/>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Vamos fazer um pequeno exemplo baseado em uma plataforma Unix Ubuntu 18.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Primeiro precisamos instalar o Cmake: </br>
+					<code>$ sudo apt-get install cmake</code>
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Agora vamos criar uma pequena aplicação em C e criar um Script CMake.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Crie um diretório "testeCmake", dentro desse diretório crie uma aplicação C 
+					chamado <i>teste.cpp</i>:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<code>$ mkdir testeCmake</code></br>
+					<code>$ cd testeCmake</code>
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Crie uma aplicação chamado teste.cpp:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/rrqk1mHX"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Agora crie um Script chamado CMakeLists.txt no diretório testeCmake:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/zZcqK8ie"></script>
+				</p>
+				
+				 <p align="left" style="margin-top: 20px" class="lead">
+					Se tudo estiver de acordo, rode os passos:</br>
+					<code>$ mkdir build && cd build</code></br>
+					<code>$ cmake ../</code></br>
+					<code>$ make</code></br>
+					<code>$ ./teste</code>
+				</p>
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20200620/test.jpeg"/>
+			    </div>
+			
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					O CMake é uma ótima opção para distribuir suas aplicações C/C++ de uma forma simples e segura.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
