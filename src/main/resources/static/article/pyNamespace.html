@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20200809/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20200809/index.jpeg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Python Namespaces e Scope.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Nas linguagens de programação o <strong>Namespaces</strong> é uma forma de organizar 
+					e estruturar os nomes dos nossos objetos.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Imagine fisicamente uma sala com algumas pessoas e todas elas têm o mesmo nome de João, 
+					como faríamos para chamar cada um deles?
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Nesse caso teríamos que chamá-los pelo nome e sobrenome para identificar cada um, pode 
+					ser que alguns sobrenomes sejam iguais, mas as chances de isso acontecer é menor.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Em uma linguagem de programação é a mesma coisa, imagine como seria difícil criar uma 
+					variável ou método sem repetir o nome?
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para resolver esse problema existe o <strong>Namespaces</strong>, que vai separar por 
+					meio de escopo ou também por módulos, mas no momento não vamos focar nos módulos.
+				<p/>
+
+				
+				<h3 align="center" style="margin-top: 100px">
+					Namespaces e Scopes.
+				</h3>
+				
+				<p align="left" style="margin-top: 25px" class="lead">
+					Em Python os Namespaces são divididos em 4 tipos: <strong>Built-In</strong>, <strong>Global</strong>, 
+					<strong>Enclosing</strong> e <strong>Local</strong>.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					O Namespace tipo <strong>Built-In</strong> são nomes que fazem parte do core do Python 
+					e são carregados automaticamente:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/rvGFXwZP"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					O Namespace tipo <strong>Global</strong> são nomes que são introduzidos na raiz 
+					principal do código.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/qXqJvzHt"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					O Namespace tipo <strong>Enclosing</strong> são nomes denominadas para funções que 
+					estão no nível principal do código e os namespaces do tipo <strong>Local</strong> 
+					são nomes para variáveis ou funções dentro de uma outra função.
+				</p>
+			
+				<p align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/MC8KbjUD"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Mas como esses tipos de Namespaces ajudam o Python a encontrar um nome de uma função 
+					ou variável no meio de possíveis nomes iguais espalhados pelo código?
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Aí que entra o <strong>Scope</strong>, onde o Python verifica o nome da variável ou 
+					função escalando níveis.
+				</p>
+				
+				<div align="left">
+					<img class="img-responsive" alt="" src="../../img/works/20200809/nivel.jpeg"/>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 20px" class="lead">
+					A primeira busca pelo nome será dentro do escopo <strong>Local</strong>, se não encontrar, 
+					a busca será dentro do escopo <strong>Enclosing</strong>, se não encontrar a buscá será 
+					pelo escopo <strong>Global</strong> e não encontrando a última tentativa será no escopo 
+					<strong>Built-In</strong>.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/bgTzSPxi"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Assim o Python consegue administrar possíveis repetições de nomes das variáveis e funções.
+				</p>
+			
+				
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					O Python também utiliza os pacotes ou módulos para auxiliar no Namespace como em outras 
+					linguagens como Java e C#, mas nesse Post mostramos como o Python consegue dentro do seu 
+					contexto diferenciar nomes e funções que podem estar espalhados pelo código.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
