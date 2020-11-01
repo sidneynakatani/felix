@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20201101/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20201101/index.jpeg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Busca binária.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					A <strong>Busca Binária</strong> é uma algoritmo utilizado para encontrar a posição de um 
+					item em uma amostragem de números ordenados de forma crescente.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O algoritmo consiste em fazer sucessivas divisões na amostragem e verificando cada 
+					parte dividida.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Fazendo uma analogia com um dicionário, imagine que esteja buscando a letra <strong><i>h</i></strong>, 
+					então você abre o dicionário no meio e percebe que o índice está na letra <strong><i>m</i></strong>, 
+					isso quer dizer que a letra <strong><i>h</i></strong> está na primeira metade do dicionário.
+				</p>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Agora descartamos a segunda metade e continuamos dividindo a primeira metade até encontrar 
+					a letra <strong><i>h</i></strong>.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Em comparação com uma <strong>busca linear</strong>, a busca binária pode ser mais eficiente 
+					na maior parte dos casos.
+				<p/>
+				
+				<h3 align="center" style="margin-top: 100px">
+					Exemplificando com Python.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20201101/binary.png"/>
+			    </div>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Vamos construir um código que aplique o algoritmo de busca binária com Python.
+				</p>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					Com uma amostragem de números ordenados de forma crescente, vamos buscar o 
+					número <strong>37</strong>.
+			    </div>
+			    
+				<div align="left" style="margin-top: 20px" class="lead">
+					<img class="img-responsive" alt="" src="../../img/works/20201101/1.png"/>
+			    </div>
+			    
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Agora dividimos a amostragem e indicamos as duas extremidades e o meio. Repare 
+					que o número <strong>37</strong> é maior que o número do meio <strong>19</strong>, 
+					então descartamos a primeira divisão e ficamos com a segunda que inicia do meio 
+					para direita.
+				</p>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					<img class="img-responsive" alt="" src="../../img/works/20201101/2.png"/>
+			    </div>
+			    
+			     <p align="left" style="margin-top: 50px" class="lead">
+					Dividimos novamente a segunda parte e apontamos as extremidades e o meio, repare 
+					que agora encontramos o número <strong>37</strong> no meio da nossa divisão.
+				</p>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					<img class="img-responsive" alt="" src="../../img/works/20201101/3.png"/>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Vamos aplicar essa teoria em um código Python:
+				</p>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/0ehPLBwy?theme=dark"></script>
+			    </div>
+			    
+			     <p align="left" style="margin-top: 20px" class="lead">
+					Repare que ao rodar o código, o resultado é a posição do item buscado no índice do array.
+				</p>
+				
+				
+				
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					A busca binária pode resolver alguns problemas para otimização de uma busca 
+					em uma lista de números ordenados de forma crescente.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
