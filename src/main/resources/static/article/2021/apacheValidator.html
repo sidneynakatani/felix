@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20210403/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20210403/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Apache Commons Validator.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O Apache Commons Validator é uma biblioteca que auxilia na validação de campos sem 
+					a necessidade de utilizar algoritmos complexos.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					São vários campos que podemos validar, desde e-mail até número de cartão de crédito.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Apesar dessas validações serem feitas geralmente na camada de front, existem casos 
+					onde precisamos validar em back.
+				</p>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Em soluções de API para integração, essa biblioteca pode ser bem útil, eliminando 
+					a necessidade de criar algoritmos de validação.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Além de ser extremamente útil para algumas aplicações, é muito fácil de instalar e utilizar.
+				<p/>
+				
+				<h3 align="center" style="margin-top: 100px">
+					Exemplos de uso.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20210403/validator.jpg"/>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Vamos instalar o <strong>Apache Commons Validator</strong> via Maven:
+				</p>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/u9WEC3z2?theme=dark"></script>
+				</div>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					O primeiro exemplo é validar se a composição do e-mail é válido:
+				</p>
+				
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/9SqrYptf?theme=dark"></script>
+				</div>
+				
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Podemos validar se o EAN 10 ou 13 é válido:
+				</p>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/mnUGfywf?theme=dark"></script>
+				</div>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Conseguimos validar o ISBN:
+				</p>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/tEFT2bVX?theme=dark"></script>
+				</div>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Também podemos verificar se a composição do número do cartão de crédito é válido:
+				</p>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/f7XCESDC?theme=dark"></script>
+				</div>
+			    
+			   
+			
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					O Apache Commons Validator é uma ótima ferramenta para aumentar a produtividade, 
+					evitando criar lógicas complexas e desnecessárias de validação.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
