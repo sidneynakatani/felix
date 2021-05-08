@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20210508/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20210508/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Python venv.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Trabalhar com Python hoje em dia é algo tão importante que programadores de outras 
+					stacks utilizam Python para criar ferramentas auxiliares devido a facilidade de 
+					criação das mesmas.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Mas muitas vezes, começamos a criar várias ferramentas e algumas não utilizamos 
+					mais e aquelas bibliotecas que baixamos para essas ferramentas começam a ocupar 
+					espaço em disco, podendo até conflitar com outras.
+				<p/>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para evitar isso, o ambiente Python possibilita criar ambientes virtuais que ficam 
+					isolados do ambiente externo.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Essa capacidade é chamada de <strong><i>venv</i></strong>, onde podemos criar um 
+					ambiente virtual sem comprometer o sistema externo.
+				</p>
+				
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Outra vantagem é que se ocorrer algum tipo de problema relacionado a bibliotecas 
+					mal instaladas, podemos desfazer o ambiente virtual e criar outro.
+				<p/>
+				
+				<h3 align="center" style="margin-top: 100px">
+					Instalando e testando venv.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20210508/venv.jpg"/>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 50px" class="lead">
+					Primeiro precisamos instalar o venv via apt-get: <br>
+					<code>$ sudo apt-get install python3-venv</code>
+				</p>
+				
+				 <p align="left" style="margin-top: 50px" class="lead">
+					Agora podemos criar nosso ambiente virtual:<br>
+					<code>$ python3 -m venv sidney-env</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Podemos agora ativar:<br>
+					<code>. sidney-env/bin/activate</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Se foi o ambiente foi criado, vai ser apresentado o prompt:<br>
+					<code>(sidney-env) sidney@sidney-Aspire-4745:/tmp$</code>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Pronto, agora podemos trabalhar com um ambiente virtual totalmente isolado.
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Para apagar esse ambiente virtual é só executar o comando:<br>
+					<code>$ deactivate</code><br>
+					<code>$ rm -r sidney-env</code>
+				</p>
+				
+				
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					Assim como o Docker possibilita criar ambientes conteinerizados facilitando o 
+					escalonamento e remoção, o venv possibilita criação de ambientes isolados onde 
+					pode se trabalhar sem medo de afetar o sistema externo. 
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
