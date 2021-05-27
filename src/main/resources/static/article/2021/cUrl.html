@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20210529/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20210529/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">cUrl.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O <strong>cUrl</strong> ou “Client Url” é uma ferramenta para consumir requisições HTTP 
+					via linha de comandos.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Geralmente distribuídas para plataforma UNIX, mas pode ser instalado e utilizado em outras 
+					plataformas como Windows.
+				<p/>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Por não contar com uma interface gráfica, muitos desenvolvedores preferem utilizar ferramentas 
+					mais amigáveis como <strong>Postman</strong>.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Mas muitas vezes, estamos sem a possibilidade de utilizar uma interface gráfica, casos em que 
+					estamos trabalhando dentro de um terminal de um servidor.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Outra vantagem de se usar cUrl é a possibilidade de gerar scripts com rotinas programadas.
+				<p/>
+				
+				<h3 align="center" style="margin-top: 100px">
+					Executando principais comandos.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20210529/curl"/>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Quando estamos trabalhando com Rest, podemos chamar todos os verbos disponíveis como 
+					POST, PUT, GET, DELETE, PATCH. Mas vamos apresentar os principais.
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Vamos começar com POST, para criar uma entidade: $ curl --data ‘payload’ -H ‘header’ -X POST
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					Exemplo: $ curl https://jsonplaceholder.typicode.com/posts -H "Content-Type: application/json"  -X POST --data '{
+					  "userId": 1,
+					  "id": 2,
+					  "title": "Testando",
+					  "body": "Teste"
+					}'
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					<script src="https://pastebin.com/embed_js/qEHAHcLY?theme=dark"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Agora vamos testar o GET para consultar uma entidade: $ curl {URL}
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					Exemplo: $ curl https://jsonplaceholder.typicode.com/posts/1
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					<script src="https://pastebin.com/embed_js/mhNkJXM9?theme=dark"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Podemos alterar a entidade com PUT: $ curl --data ‘payload’ -H ‘header’ -X PUT
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					Exemplo: $ curl https://jsonplaceholder.typicode.com/posts -X PUT -H "Content-Type: application/json"  --data '{
+					  "userId": 1,
+					  "id": 2,
+					  "title": "Test",
+					  "body": "Tests"
+					}'
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					<script src="https://pastebin.com/embed_js/xksSac20?theme=dark"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Executando DELETE podemos apagar a entidade: $ curl --data ‘payload’ -H ‘header’ -X DELETE
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					Exemplo: $ curl https://jsonplaceholder.typicode.com/posts/1 -X DELETE -H "Content-Type: application/json"
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					<script src="https://pastebin.com/embed_js/3V3rpMx1?theme=dark"></script>
+				</p>
+				
+				
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					O cUrl é uma ótima ferramenta para utilizar em terminais, principalmente onde não 
+					contamos com a interface gráfica, além da possibilidade de gerar batches para 
+					automatizar tarefas.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
