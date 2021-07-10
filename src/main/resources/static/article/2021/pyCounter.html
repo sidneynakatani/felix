@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20210703/index.jpeg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20210709/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Python counter.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Em muitos algoritmos computacionais, a utilização de contadores é muito usada.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Existem várias ferramentas Python para trabalhar com contadores, mas o <strong>counter</strong> 
+					é uma das mais eficientes.
+				<p/>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Geralmente para trabalhar com contadores, criamos um loop de zero até o total de itens.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Com <strong>counter</strong> não precisamos adicionar nenhuma lógica com loop para realizar 
+					a contagem dos itens.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					A única desvantagem é que o <strong>counter</strong> só consegue fazer a contagem de objetos simples.
+				<p/>
+				
+				<h3 align="center" style="margin-top: 100px">
+					Utilizando counter.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20210709/counter.png"/>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Segue um pequeno exemplo de um contador padrão utilizando loop:
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					<script src="https://pastebin.com/embed_js/9mPpX4va?theme=dark"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Agora vamos utilizar uma forma mais simples com dicionário:
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					<script src="https://pastebin.com/embed_js/q0dcFWcC?theme=dark"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					O método <strong>get</strong> busca o valor por chave, se não encontrar o retorno é zero, 
+					caso contrário é incrementado 1 ao valor de retorno.
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Agora vamos utilizar o <strong>counter</strong>:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/1DmXr31T?theme=dark"></script>
+				</p>
+				
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Podemos trazer a quantidade por chave com <strong>counter</strong>:
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					<script src="https://pastebin.com/embed_js/jVLnKQjD?theme=dark"></script>
+				</p>
+				
+				
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					O counter é uma ótima ferramenta Python para trabalhar com contadores sem 
+					precisar implementar loops.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
