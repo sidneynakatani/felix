@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20210731/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20210731/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Spring Webflux.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					O <strong>Spring Webflux</strong> é uma lib do ecossistema Spring para programação reativa.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					A programação reativa para Java é uma ótima opção para quem quer uma aplicação não blocante.
+				<p/>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para atender as requisições assíncronas, o Webflux utiliza o servidor Netty que vem embarcado 
+					com a lib.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Diferente da programação síncrona, a programação não blocante consegue atender várias 
+					requisições simultaneamente.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Mas para que o sistema atenda às requisições simultaneamente, toda infraestrutura precisa 
+					ser não blocante.
+				<p/>
+				
+				<h3 align="center" style="margin-top: 100px">
+					Configuração de uma aplicação Event Stream.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20210731/stream.png"/>
+			    </div>
+			    
+			    <p align="left" style="margin-top: 70px" class="lead">
+					Para construir um exemplo mais simples sem precisar criar uma infraestrutura com um banco NOSQL, 
+					vamos mostrar uma aplicação com Event Stream.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					O <strong>Event Stream</strong> disponibiliza um processamento e entrega de dados em forma de 
+					fluxos contínuos.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Vamos adicionar a dependência do Webflux dentro do POM.xml de uma aplicação Spring boot: 
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					<script src="https://pastebin.com/embed_js/gNfAAsJP?theme=dark"></script>
+				</p>
+				
+				<p align="left" style="margin-top: 50px" class="lead">
+					Dentro do Webflux existe uma diferença na construção do endpoint, onde utilizamos o wrapper 
+					<strong>Mono</strong> para retornar 1 item e <strong>Flux</strong> para retorno de uma coleção.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Podemos agora criar um endpoint para testar nossa aplicação Event Stream:
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					<script src="https://pastebin.com/embed_js/9sWZ4RxS?theme=dark"></script>
+				</p>
+				
+				
+				<p align="left" style="margin-top: 70px" class="lead">
+					Podemos verificar que as chamadas são atendidas a cada 1 segundo até a solicitação de cancelamento:
+				</p>
+				
+				<p align="left" style="margin-top: 10px" class="lead">
+					<img class="img-responsive" alt="" src="../../img/works/20210731/event.jpg"/>
+				</p>
+				
+			
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					Utilizar programação reativa pode resolver alguns problemas como requisições pesadas ou que não 
+					precisam retornar a resposta imediatamente, lembrando que toda infraestrutura deve atender 
+					requisições assíncronas para que o Webflux funcione perfeitamente.
+
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
