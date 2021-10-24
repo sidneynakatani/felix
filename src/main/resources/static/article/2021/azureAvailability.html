@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20211023/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20211023/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Zonas e Regiões de disponibilidade Azure.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					A Azure disponibiliza uma capacidade de disponibilidade de seus serviços de forma 
+					a entregar resiliência e confiabilidade nos seus produtos.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O que tudo isso quer dizer na prática? 
+				<p/>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Ao utilizar serviços Azure, a Microsoft garante um percentual de disponibilidade das 
+					suas aplicações dependendo da escolha de redundância, em outras palavras, mesmo que 
+					sua aplicação caia por qualquer motivo, ela não ficará mais que alguns segundos fora do ar.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O tempo de recuperação da aplicação ou serviço vai depender do tipo de redundância que escolher, 
+					que podem ser: Redundância Local, Redundância de Zonas e Redundância Regional.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para cada tipo de contratação de redundância terá um custo diferente, quanto maior o tempo de 
+					disponibilidade/recuperação maior o custo.
+				<p/>
+				
+				<h3 align="center" style="margin-top: 100px">
+					Definindo cada redundância Azure.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20211023/availability.jpeg"/>
+			    </div>
+			    
+			     <div align="left" style="margin-top: 80px" class="lead">
+			     	A primeira opção que teremos é sem a contratação de redundância, a Single VM, onde teremos 
+			     	uma única instância do serviços, mas mesmo que a instância caia ela é recuperada rapidamente, 
+			     	sendo um SLA de 99,9% ao ano.
+				</div>
+				
+				<div align="center" style="margin-top: 10px">
+					<img class="img-responsive" alt="" src="../../img/works/20211023/vm.jpg"/>
+			    </div>
+				
+				<div align="left" style="margin-top: 80px" class="lead">
+			    	A segunda opção seria a Redundância Local ou Availability Set, onde teremos dentro de um mesmo 
+			    	data center 2 instâncias do serviços em racks separados, assim, mesmo que uma instância caia, 
+			    	teremos outra funcionando, essa modalidade tem um SLA de 99,95% ao ano.
+				</div>
+				
+				<div align="center" style="margin-top: 10px">
+					<img class="img-responsive" alt="" src="../../img/works/20211023/set.jpg"/>
+			    </div>
+				
+				<div align="left" style="margin-top: 80px" class="lead">
+			     	A terceira opção é a Redundância por zona ou Availability zone, onde teremos instâncias espelhadas 
+			     	em “n” data centers de uma mesma zona de atuação, se um data center cair, ainda teremos outro data 
+			     	center disponível, essa modalidade tem um SLA de 99,99% ao ano.
+				</div>
+				
+				<div align="center" style="margin-top: 10px">
+					<img class="img-responsive" alt="" src="../../img/works/20211023/zone.jpg"/>
+			    </div>
+				
+				<div align="left" style="margin-top: 80px" class="lead">
+			     	A última opção é uma Redundância por região, onde teremos instâncias espelhadas em “n” data centers 
+			     	e em outra região separada por 300 milhas de distância, ou seja, se uma região por qualquer motivo 
+			     	seja por falta de energia ou queda de rede, ainda teremos a disponibilidade do serviço atendendo em 
+			     	outra região, essa modalidade entrega um SLA quase zero por ano.
+				</div>
+				
+				<div align="center" style="margin-top: 10px">
+					<img class="img-responsive" alt="" src="../../img/works/20211023/pair.jpg"/>
+			    </div>
+			    
+			    <div align="left" style="margin-top: 80px" class="lead">
+			     	Verificando a necessidade de disponibilidade da sua aplicação fica a cargo do Devops escolher qual a 
+			     	melhor modalidade solicitar.
+				</div>
+		
+			
+				<h3 style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					Fica claro que os serviços nas nuvens Azure são bem seguras e confiáveis, entregando um SLA muito 
+					próximo do zero, fica a cargo do cliente escolher o melhor custo benefício de redundância adotar.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
