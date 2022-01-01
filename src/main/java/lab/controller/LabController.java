@@ -19,8 +19,9 @@ public class LabController {
     	Map<String, String> pageMap = new HashMap<>();
     	pageMap.put("1", "lab");
     	pageMap.put("2", "lab2");
+    	pageMap.put("3", "lab3");
     	
-    	String mainPage = "lab2";
+    	String mainPage = "lab3";
     	
     	if(!StringUtils.isEmpty(page)) {
     		if(pageMap.containsKey(page)) {
