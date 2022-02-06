@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20220206/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20220206/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Blockchain com Python.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Quando falamos em Blockchain já pensamos em criptomoedas, mas a tecnologia do 
+					Blockchain é muito mais do que isso.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					O Blockchain é uma tecnologia onde toda informação não fica centralizada, pelo contrário, 
+					a informação fica descentralizada em forma de blocos.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					A informação fica altamente protegida pois cada bloco na corrente tem seu hash validado, 
+					caso 1 bloco não seja válido, todo fluxo é descartado.
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					A tecnologia utiliza o algoritmo sha-256 para criar o hash e criptografar os dados que serão 
+					trocados entre os blocos da corrente.
+				<p/>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para criar o hash do bloco, é feita uma composição da data, índice, corpo da mensagem e o 
+					hash anterior se não for um bloco inicial(Bloco Gênesis).
+				</p>
+				
+				<h3 align="center" style="margin-top: 100px">
+					Criando aplicação Blockchain Python.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20220206/block.png"/>
+			    </div>
+			    
+			     <div align="left" style="margin-top: 100px" class="lead">
+			        Vamos criar uma simples aplicação Blockchain para criar blocos e validar a corrente.
+				</div>
+				
+				<div align="left" style="margin-top: 20px" class="lead">
+			     	Criamos uma classe com todos os componentes necessários para o corpo do bloco e 
+			     	um validador de hash:
+				</div>
+				
+				<div align="left" >
+					<script src="https://pastebin.com/embed_js/xBgGv2Vr?theme=dark"></script>
+			    </div>
+			    
+			    <div align="left" style="margin-top: 50px" class="lead">
+			     	Agora criamos uma rotina para executar 20 blocos:
+				</div>
+				
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/TjnTDmnW?theme=dark"></script>
+			    </div>
+			    
+			    <div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/4pez0fSt?theme=dark"></script>
+			    </div>
+			    
+			    <div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20220206/valid.jpg"/>
+					Se todos os blocos estiverem válidos, a corrente é seguida
+			    </div>
+			    
+			    
+			     <div align="left" style="margin-top: 100px" class="lead">
+			     	Vamos agora simular uma alteração no bloco:
+				</div>
+				
+				<div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/ZZHQg0eX?theme=dark"></script>
+			    </div>
+			    
+			    <div align="left" style="margin-top: 20px">
+					<script src="https://pastebin.com/embed_js/sfY5xhw5?theme=dark"></script>
+			    </div>
+			    
+			    <div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20220206/invalid.jpg"/>
+					Se algum bloco é alterado, a corrente é quebrada
+			    </div>
+			    
+			    <div align="left" style="margin-top: 50px" class="lead">
+			     	Um simples exemplo como funciona o fluxo de um blockchain.
+				</div>
+			
+				<h3 align="center" style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					Ficou claro que o Blockchain é seguro e pode ser utilizado em aplicações que desejam 
+					utilizar informações descentralizadas.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
