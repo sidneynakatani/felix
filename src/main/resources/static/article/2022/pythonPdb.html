@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-102268397-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<head>
+
+<title>Nakatech - My Development place</title>
+<meta charset="utf-8"></meta>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- css -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen" />
+<link href="../../css/style.css" rel="stylesheet" media="screen" />
+<link href="../../color/default.css" rel="stylesheet" media="screen" />
+<script src="../../js/modernizr.custom.js"></script>
+</head>
+
+<!--  Thumb -->
+<img src="../../img/works/20220305/index.jpg" alt=""
+	style="display: none;" />
+
+
+<body>
+
+
+
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="/lab">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- /dl-menuwrapper -->
+	</div>
+
+	<!-- intro area -->
+
+	<div align="center">
+
+		<img class="img-responsive" alt=""
+			src="../../img/works/20220305/index.jpg" />
+
+	</div>
+
+
+
+	<!-- Article -->
+	<article>
+		<div class="container" style="margin-top: 30px;">
+
+
+			<div class="row"
+				style="background: #f2f2f2; border: 30px solid rgba(242, 242, 242);">
+
+				<h2 align="center">Python e debug terminal.</h2>
+
+				<p align="left" style="margin-top: 50px" class="lead">
+					Um dos motivos que levam o desenvolvedor Python a recorrer a <i>IDE’s</i> 
+					é a dificuldade de ferramentas de debug.
+				</p>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Para quem está acostumado a trabalhar com <i>Java</i> e <i>.net</i>, 
+					a utilização de <i>IDE’s</i> é praticamente obrigatória, nessas IDE's as 
+					ferramentas de debug já estão embarcadas.
+				<p/>
+
+				<p align="left" style="margin-top: 20px" class="lead">
+					Nada contra IDE’s, a ideia do artigo é mostrar que é possível uma 
+					ferramenta de debugger sem utilização de IDE’s. 
+				</p>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					Com o módulo built-in Python chamado <strong>PDB</strong> podemos 
+					executar o código em debugger no terminal.
+				<p/>
+				
+				<p align="left" style="margin-top: 20px" class="lead">
+					O módulo PDB é bem interessante pois às vezes queremos executar alguns 
+					scripts Python sem a necessidade de carregamento de logs ou utilização de uma IDE.
+				</p>
+				
+				<h3 align="center" style="margin-top: 100px">
+					Utilização do PDB.
+				</h3>
+				
+				<div align="center">
+					<img class="img-responsive" alt="" src="../../img/works/20220305/pdb.png"/>
+			    </div>
+			    
+			     <div align="left" style="margin-top: 100px" class="lead">
+			        A utilização do debugger via PDB é bastante simples, mas antes precisamos 
+			        conhecer os comandos básicos.
+				</div>
+				
+				<div align="left" style="margin-top: 20px">
+					<img class="img-responsive" alt="" src="../../img/works/20220305/pdb-cheatsheet.png"/>
+			    </div>
+			
+				<div align="left" style="margin-top: 50px" class="lead">
+			     	Agora podemos executar um pequeno exemplo criando uma pequena classe Python.
+				</div>
+				
+				<div align="left">
+					<script src="https://pastebin.com/embed_js/3scqn6U6?theme=dark"></script>
+				</div>
+				
+				<div align="left" style="margin-top: 30px" class="lead">
+			     	Agora vamos executar o código com PDB:
+				</div>
+				
+				<div align="left">
+					<script src="https://pastebin.com/embed_js/RRxGdXWu?theme=dark"></script>
+				</div>
+				
+			    <div align="left" style="margin-top: 30px" class="lead">
+			     	Executando o debugger o primeiro ponto de parada é a assinatura da classe, 
+			     	e pressionando “n” passamos para a próxima linha:
+				</div>
+				
+				<div align="left">
+				  <script src="https://pastebin.com/embed_js/JwUYKZKy?theme=dark"></script>
+				</div>
+				
+				<div align="left" style="margin-top: 30px" class="lead">
+			     	Com o comando “p” podemos verificar os elementos da linha:
+				</div>
+				
+				<div align="left">
+				 	<script src="https://pastebin.com/embed_js/7NQ4kvS8?theme=dark"></script>
+				</div>
+			
+				<h3 align="center" style="margin-top: 70px;">Conclusão.</h3>
+
+				<p align="left" class="lead">
+					O PDB pode resolver algumas “dores” sobre ferramentas de depuração para 
+					quem não quer utilizar IDE’s ou para quem quer depurar um script Python 
+					rapidamente via terminal.
+				</p>
+
+			</div>
+	   </div>
+	</article>
+
+
+	<!-- Contact -->
+	<section id="contact" class="home-section bg-white">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h5>We're on social networks</h5>
+					<ul class="social-network">
+						<li><a href="https://www.linkedin.com/in/shnakatni"
+							target="_blank"> <span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+							</span></a></li>
+
+						<li><a href="https://twitter.com/shnakatani" target="_blank">
+								<span class="fa-stack fa-2x"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;2014 Mamba company. All rights reserved. By <a
+							href="http://bootstraptaste.com">Bootstraptaste</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.smooth-scroll.min.js"></script>
+	<script src="../../js/jquery.dlmenu.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/custom.js"></script>
+</body>
+</html>
